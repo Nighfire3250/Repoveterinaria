@@ -35,9 +35,8 @@ export default function HeaderLinks() {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          href="http://localhost:3000/login-page"
           color="transparent"
-          target="_blank"
           className={classes.navLink}
         >
           <AccountBox className={classes.icons} /> Iniciar Sesion

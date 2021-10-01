@@ -72,7 +72,7 @@ export default function SectionBasics() {
     <div className={classes.sections}>
       <div className={classes.container}>
         <div className={classes.title}>
-          <h2>Basic Elements</h2>
+          <h2 center> Has tus pedidos con mayor rapidez </h2>
         </div>
         <div id="buttons">
           <div className={classes.title}>

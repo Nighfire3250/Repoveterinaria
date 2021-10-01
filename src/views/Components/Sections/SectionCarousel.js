@@ -30,6 +30,9 @@ export default function SectionCarousel() {
   };
   return (
     <div className={classes.section}>
+      <div className={classes.textinic}>
+        <h2 center> Has tus pedidos con mayor rapidez </h2>
+      </div>
       <div className={classes.container}>
         <GridContainer>
           <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
