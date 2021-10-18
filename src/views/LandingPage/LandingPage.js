@@ -33,6 +33,7 @@ export default function LandingPage(props) {
     <div>
       <Header
         color="transparent"
+        href="http://localhost:3000/landing-page"
         routes={dashboardRoutes}
         brand="Material Kit React"
         rightLinks={<HeaderLinks />}

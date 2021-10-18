@@ -52,9 +52,9 @@ export default function Components(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionCarousel />
         <GridItem md={12} className={classes.textCenter}>
-          <Link to={"/login-page"} className={classes.link}>
+          <Link to={"/profile-page"} className={classes.link}>
             <Button color="primary" size="lg" simple>
-              View Login Page
+              Página Veterinarios
             </Button>
           </Link>
         </GridItem>

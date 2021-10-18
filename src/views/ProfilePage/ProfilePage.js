@@ -4,9 +4,9 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
-import Camera from "@material-ui/icons/Camera";
-import Palette from "@material-ui/icons/Palette";
-import Favorite from "@material-ui/icons/Favorite";
+import AccountBox from "@material-ui/icons/AccountBox";
+import AssignmentLate from "@material-ui/icons/AssignmentLate";
+import AssignmentTurnedIn from "@material-ui/icons/AssignmentTurnedIn";
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -47,6 +47,7 @@ export default function ProfilePage(props) {
     <div>
       <Header
         color="transparent"
+        href="http://localhost:3000/landing-page"
         brand="Material Kit React"
         rightLinks={<HeaderLinks />}
         fixed
@@ -72,7 +73,7 @@ export default function ProfilePage(props) {
                   </div>
                   <div className={classes.name}>
                     <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
+                    <h6>Veterinario</h6>
                     <Button justIcon link className={classes.margin5}>
                       <i className={"fab fa-twitter"} />
                     </Button>
@@ -88,10 +89,8 @@ export default function ProfilePage(props) {
             </GridContainer>
             <div className={classes.description}>
               <p>
-                An artist of considerable range, Chet Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.{" "}
+                Graduado de la Universidad Central de Nicaragua, es profesional
+                en las ciencias médicas veterinarias.{" "}
               </p>
             </div>
             <GridContainer justify="center">
@@ -101,8 +100,8 @@ export default function ProfilePage(props) {
                   color="primary"
                   tabs={[
                     {
-                      tabButton: "Studio",
-                      tabIcon: Camera,
+                      tabButton: "Información personal",
+                      tabIcon: AccountBox,
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
@@ -133,8 +132,8 @@ export default function ProfilePage(props) {
                       ),
                     },
                     {
-                      tabButton: "Work",
-                      tabIcon: Palette,
+                      tabButton: "Citas Reservadas",
+                      tabIcon: AssignmentLate,
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
@@ -170,8 +169,8 @@ export default function ProfilePage(props) {
                       ),
                     },
                     {
-                      tabButton: "Favorite",
-                      tabIcon: Favorite,
+                      tabButton: "Citas realizadas",
+                      tabIcon: AssignmentTurnedIn,
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
