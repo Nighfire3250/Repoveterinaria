@@ -4,11 +4,11 @@ import Carousel from "react-slick";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
-import LocationOn from "@material-ui/icons/LocationOn";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
+import Articulos from "./Articulos";
 
 import image1 from "assets/img/bg.jpg";
 import image2 from "assets/img/bg2.jpg";
@@ -31,8 +31,11 @@ export default function SectionCarousel() {
   return (
     <div className={classes.section}>
       <div className={classes.textinic}>
-        <h2 center> Has tus pedidos con mayor rapidez </h2>
+        <h2 style={{ paddingLeft: "3rem" }}>
+          Has tus pedidos con mayor rapidez
+        </h2>
       </div>
+      <Articulos />
       <div className={classes.container}>
         <GridContainer>
           <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
@@ -41,10 +44,7 @@ export default function SectionCarousel() {
                 <div>
                   <img src={image1} alt="First slide" className="slick-image" />
                   <div className="slick-caption">
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      Yellowstone National Park, United States
-                    </h4>
+                    <h4>Yellowstone National Park, United States</h4>
                   </div>
                 </div>
                 <div>
@@ -54,19 +54,13 @@ export default function SectionCarousel() {
                     className="slick-image"
                   />
                   <div className="slick-caption">
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      Somewhere Beyond, United States
-                    </h4>
+                    <h4>Somewhere Beyond, United States</h4>
                   </div>
                 </div>
                 <div>
                   <img src={image3} alt="Third slide" className="slick-image" />
                   <div className="slick-caption">
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      Yellowstone National Park, United States
-                    </h4>
+                    <h4>Yellowstone National Park, United States</h4>
                   </div>
                 </div>
               </Carousel>
