@@ -17,7 +17,6 @@ import Parallax from "components/Parallax/Parallax.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionCarousel from "./Sections/SectionCarousel.js";
 import styles from "assets/jss/material-kit-react/views/components.js";
-import SeccionExamples from "./Sections/SectionExamples";
 
 const useStyles = makeStyles(styles);
 
@@ -51,7 +50,6 @@ export default function Components(props) {
 
       <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionCarousel />
-        <SeccionExamples />
         <GridItem md={12} className={classes.textCenter}>
           <Link to={"/profile-page"} className={classes.link}>
             <Button color="primary" size="lg" simple>

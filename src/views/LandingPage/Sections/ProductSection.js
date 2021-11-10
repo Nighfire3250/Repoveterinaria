@@ -21,13 +21,12 @@ export default function ProductSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Let{"'"}s talk product</h2>
+          <h2 className={classes.title}>Consultorio Virtual</h2>
           <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            product. Keep you user engaged by providing meaningful information.
-            Remember that by this time, the user is curious, otherwise he wouldn
-            {"'"}t scroll to get here. Add a button if you want the user to see
-            more.
+            Bienvenido al consultorio virtual de la veterinaria mundo mascota en
+            esta seccion podras ver los reultados obtenidos te tu mascota.Se
+            recomienta tener a mano el numero de la consulta, por favor leer las
+            sugerencias mostradas acontinuacion agracias por preferirnos.
           </h5>
         </GridItem>
       </GridContainer>
@@ -36,7 +35,7 @@ export default function ProductSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="Free Chat"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              description="Estamos para servile en todo momento del dia cualquier duda o pregunta sobre algun medicamento o consultas puede hacer al numero de Whast app."
               icon={Chat}
               iconColor="info"
               vertical
@@ -44,8 +43,8 @@ export default function ProductSection() {
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Verified Users"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              title="Seguridad"
+              description="La informacion aqui presentada es basica y solamente el presonal de nuestra veterinaria tiene acceso a la documentacion completa, guardamos su seguridad"
               icon={VerifiedUser}
               iconColor="success"
               vertical
@@ -53,8 +52,8 @@ export default function ProductSection() {
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Fingerprint"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              title="Compromiso"
+              description="Cada uno de los elementos de nuestro personal esta altamente calificado para responder y sugerir medicamentos, consultas, preguntas etc. Aqui su bienestar es primero"
               icon={Fingerprint}
               iconColor="danger"
               vertical

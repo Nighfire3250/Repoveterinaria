@@ -28,6 +28,7 @@ export default function HeaderLinks() {
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
         <Button
+          href="http://localhost:3000/landing-page"
           color="transparent"
           className={classes.navLink}
         > <MenuBook className={classes.icons} /> Historial de Pacientes
@@ -43,11 +44,6 @@ export default function HeaderLinks() {
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        {/*<Tooltip title="Delete">
-          <IconButton aria-label="Delete">
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>*/}
         <Tooltip
           id="instagram-twitter"
           title="Síguenos en twitter"

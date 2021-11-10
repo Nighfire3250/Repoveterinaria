@@ -20,18 +20,19 @@ export default function WorkSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Work with us</h2>
+          <h2 className={classes.title}>Buscador</h2>
           <h4 className={classes.description}>
-            Divide details about your product or agency work into parts. Write a
-            few lines about each one and contact us about any further
-            collaboration. We will responde get back to you in a couple of
-            hours.
+            ¿Como puedo usar el Consultorio virtual?. Recuerde tener su hoja de
+            consulta a mano, este documento contiene una numeracion la cual
+            debera introducir en el buscardor que se muestra abajo, luego
+            coloque su nombre, el nombre de su mascota tal y como aparece en la
+            hoja de consulta, luego precione el boton buscar. Listo
           </h4>
           <form>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  labelText="Your Name"
+                  labelText="Nombre del Cliente"
                   id="name"
                   formControlProps={{
                     fullWidth: true,
@@ -40,7 +41,7 @@ export default function WorkSection() {
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  labelText="Your Email"
+                  labelText="Nombre de la Mascota"
                   id="email"
                   formControlProps={{
                     fullWidth: true,
@@ -48,7 +49,7 @@ export default function WorkSection() {
                 />
               </GridItem>
               <CustomInput
-                labelText="Your Message"
+                labelText="Numero de Consulta"
                 id="message"
                 formControlProps={{
                   fullWidth: true,
@@ -60,7 +61,7 @@ export default function WorkSection() {
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
-                <Button color="primary">Send Message</Button>
+                <Button color="primary">Buscar</Button>
               </GridItem>
             </GridContainer>
           </form>

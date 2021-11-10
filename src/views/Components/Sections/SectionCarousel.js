@@ -44,7 +44,7 @@ export default function SectionCarousel() {
                 <div>
                   <img src={image1} alt="First slide" className="slick-image" />
                   <div className="slick-caption">
-                    <h4>Yellowstone National Park, United States</h4>
+                    <h4>Compromiso</h4>
                   </div>
                 </div>
                 <div>
@@ -54,13 +54,13 @@ export default function SectionCarousel() {
                     className="slick-image"
                   />
                   <div className="slick-caption">
-                    <h4>Somewhere Beyond, United States</h4>
+                    <h4>Responsabilidad</h4>
                   </div>
                 </div>
                 <div>
                   <img src={image3} alt="Third slide" className="slick-image" />
                   <div className="slick-caption">
-                    <h4>Yellowstone National Park, United States</h4>
+                    <h4>Seguridad</h4>
                   </div>
                 </div>
               </Carousel>
