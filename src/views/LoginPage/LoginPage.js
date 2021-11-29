@@ -138,7 +138,12 @@ export default function LoginPage(props) {
                     />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg">
+                    <Button
+                      href="http://localhost:3000/profile-page"
+                      simple
+                      color="primary"
+                      size="lg"
+                    >
                       Get started
                     </Button>
                   </CardFooter>
