@@ -11,6 +11,8 @@ import Comida5 from "assets/img/articulos/5- crupis bocadillos para perros.jpg";
 import Comida6 from "assets/img/articulos/6-Beneful Alimento Cachorro.jpg";
 import Comida7 from "assets/img/articulos/7-Pedigree comida para perro surtida.jpg";
 import Comida8 from "assets/img/articulos/8-Pet master alimento para cahorro.jpg";
+import Comida9 from "assets/img/articulos/9-Don gato alimento.jpg";
+import Comida10 from "assets/img/articulos/10-gati alimento.jpg";
 const Articulos = () => {
   return (
     <>
@@ -52,70 +54,70 @@ const Articulos = () => {
       <div className="articulos-container">
         <div className="articulo-container">
           <div className="img-section">
-            <img src={Comida1} />
+            <img className="img-articulo" src={Comida1} />
           </div>
           <div className="title-section">precio</div>
           <div className="description-section">descripcion</div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
-            <img src={Comida2} />
+            <img className="img-articulo" src={Comida2} />
           </div>
           <div className="title-section">precio</div>
           <div className="description-section">descripcion</div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
-            <img src={Comida3} />
+            <img className="img-articulo" src={Comida3} />
           </div>
           <div className="title-section">precio</div>
           <div className="description-section">descripcion</div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
-            <img src={Comida4} />
+            <img className="img-articulo" src={Comida4} />
           </div>
           <div className="title-section">precio</div>
           <div className="description-section">descripcion</div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
-            <img src={Comida5} />
+            <img className="img-articulo" src={Comida5} />
           </div>
           <div className="title-section">precio</div>
           <div className="description-section">descripcion</div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
-            <img src={Comida6} />
+            <img className="img-articulo" src={Comida6} />
           </div>
           <div className="title-section">precio</div>
           <div className="description-section">descripcion</div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
-            <img src={Comida7} />
+            <img className="img-articulo" src={Comida7} />
           </div>
           <div className="title-section">precio</div>
           <div className="description-section">descripcion</div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
-            <img src={Comida8} />
+            <img className="img-articulo" src={Comida8} />
           </div>
           <div className="title-section">precio</div>
           <div className="description-section">descripcion</div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
-            <img src={Comida1} />
+            <img className="img-articulo" src={Comida9} />
           </div>
           <div className="title-section">precio</div>
           <div className="description-section">descripcion</div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
-            <img src={Comida1} />
+            <img className="img-articulo" src={Comida10} />
           </div>
           <div className="title-section">precio</div>
           <div className="description-section">descripcion</div>

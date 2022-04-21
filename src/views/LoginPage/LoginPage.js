@@ -5,8 +5,8 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
-import People from "@material-ui/icons/People";
 // core components
+//import "assets/myComponents/Logo.scss";
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Footer from "components/Footer/Footer.js";
@@ -18,6 +18,8 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
+
+//import Logo from "assets/img/logo.jpg";
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
@@ -34,10 +36,12 @@ export default function LoginPage(props) {
   const { ...rest } = props;
   return (
     <div>
+      {/*<img className="logo-size" src={Logo} />*/}
       <Header
+        href="http://localhost:3000"
         absolute
         color="transparent"
-        brand="Material Kit React"
+        brand="Inicio de sesión"
         rightLinks={<HeaderLinks />}
         {...rest}
       />
@@ -55,7 +59,7 @@ export default function LoginPage(props) {
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Login</h4>
+                    <h4>Inicio de Sesión</h4>
                     <div className={classes.socialLine}>
                       <Button
                         justIcon
@@ -86,25 +90,9 @@ export default function LoginPage(props) {
                       </Button>
                     </div>
                   </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
                   <CardBody>
                     <CustomInput
-                      labelText="First Name..."
-                      id="first"
-                      formControlProps={{
-                        fullWidth: true,
-                      }}
-                      inputProps={{
-                        type: "text",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        ),
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Email..."
+                      labelText="Usuario..."
                       id="email"
                       formControlProps={{
                         fullWidth: true,
@@ -119,7 +107,7 @@ export default function LoginPage(props) {
                       }}
                     />
                     <CustomInput
-                      labelText="Password"
+                      labelText="Contraseña..."
                       id="pass"
                       formControlProps={{
                         fullWidth: true,
@@ -144,7 +132,7 @@ export default function LoginPage(props) {
                       color="primary"
                       size="lg"
                     >
-                      Get started
+                      Iniciar Sesión
                     </Button>
                   </CardFooter>
                 </form>

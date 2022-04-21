@@ -32,9 +32,8 @@ export default function LandingPage(props) {
   return (
     <div>
       <Header
-        brand="Perfil"
+        brand="Consultorio"
         color="transparent"
-        href="http://localhost:3000/"
         routes={dashboardRoutes}
         rightLinks={<HeaderLinks />}
         fixed
