@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sidebar.css";
+import "./Sidebar.scss";
 import GroupIcon from "@mui/icons-material/Group";
 import PetsIcon from "@mui/icons-material/Pets";
 import VaccinesIcon from "@mui/icons-material/Vaccines";

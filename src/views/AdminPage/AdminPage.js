@@ -5,7 +5,7 @@ import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import TopBar from "components/Topbar/Topbar.jsx";
 import Sidebar from "components/Sidebar/Sidebar.jsx";
-import "./AdminPage.css";
+import "./AdminPage.scss";
 import Section from "./Sections/Section.jsx";
 
 export default function AdminPage(props) {
