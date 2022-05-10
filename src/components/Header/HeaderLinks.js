@@ -12,7 +12,8 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import { AccountBox, MenuBook, Home } from "@material-ui/icons";
+import { AccountBox, MenuBook, Home, AdminPanelSettings } from "@material-ui/icons";
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 
 // core components
 //import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
@@ -27,7 +28,13 @@ export default function HeaderLinks() {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-      <Button
+        <Button
+          href="http://localhost:3000/admin-page"
+          color="transparent"
+          className={classes.navLink}
+        > <ManageAccountsIcon className={classes.icons}/> Administración
+        </Button>
+        <Button
           href="http://localhost:3000"
           color="transparent"
           className={classes.navLink}
