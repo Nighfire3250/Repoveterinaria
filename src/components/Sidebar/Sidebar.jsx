@@ -17,7 +17,7 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Usuarios</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
-              <GroupIcon />
+              <GroupIcon className="sidebarIcons" />
               Administración de usuarios
             </li>
           </ul>
@@ -26,23 +26,23 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Catálogos</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
-              <PetsIcon />
+              <PetsIcon className="sidebarIcons" />
               Pacientes
             </li>
             <li className="sidebarListItem">
-              <VaccinesIcon />
+              <VaccinesIcon className="sidebarIcons" />
               Vacunas
             </li>
             <li className="sidebarListItem">
-              <InventoryIcon />
+              <InventoryIcon className="sidebarIcons" />
               Productos
             </li>
             <li className="sidebarListItem">
-              <LocalShippingIcon />
+              <LocalShippingIcon className="sidebarIcons" />
               Proveedores
             </li>
             <li className="sidebarListItem">
-              <ManIcon />
+              <ManIcon className="sidebarIcons" />
               Roles
             </li>
           </ul>
@@ -51,7 +51,7 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Archivo</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
-              <InsertDriveFileIcon />
+              <InsertDriveFileIcon className="sidebarIcons" />
               Expedientes
             </li>
           </ul>
