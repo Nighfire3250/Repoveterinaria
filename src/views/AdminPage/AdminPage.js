@@ -4,6 +4,8 @@ import React from "react";
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import TopBar from "components/Topbar/Topbar.jsx";
+import Sidebar from "components/Sidebar/Sidebar.jsx";
+import "./AdminPage.css";
 
 export default function AdminPage(props) {
   const { ...rest } = props;
@@ -16,6 +18,10 @@ export default function AdminPage(props) {
         {...rest}
       />
       <TopBar />
+      <div className="container">
+        <Sidebar />
+        <div className="others">Otras paginas</div>
+      </div>
     </div>
   );
 }
