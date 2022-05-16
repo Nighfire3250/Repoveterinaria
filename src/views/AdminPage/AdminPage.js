@@ -7,11 +7,13 @@ import TopBar from "components/Topbar/Topbar.jsx";
 import Sidebar from "components/Sidebar/Sidebar.jsx";
 import "./AdminPage.scss";
 import Section from "./Sections/Section.jsx";
+import Vacunas from "./Sections/Catalogos/CatVacunas.jsx";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export default function AdminPage(props) {
   const { ...rest } = props;
   return (
-    <div>
+    <Router>
       <Header
         absolute
         brand="Administración"
@@ -21,8 +23,15 @@ export default function AdminPage(props) {
       <TopBar />
       <div className="container">
         <Sidebar />
-        <Section />
+        <Switch>
+          <Route exact path="/admin-page/">
+            <Section />
+          </Route>
+          <Route exact path="/admin-page/catVac">
+            <Vacunas />
+          </Route>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
