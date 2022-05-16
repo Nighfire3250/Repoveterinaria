@@ -8,6 +8,7 @@ import Sidebar from "components/Sidebar/Sidebar.jsx";
 import "./AdminPage.scss";
 import Section from "./Sections/Section.jsx";
 import Vacunas from "./Sections/Catalogos/CatVacunas.jsx";
+import Pacientes from "./Sections/Catalogos/CatPacientes.jsx";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export default function AdminPage(props) {
@@ -26,6 +27,9 @@ export default function AdminPage(props) {
         <Switch>
           <Route exact path="/admin-page/">
             <Section />
+          </Route>
+          <Route exact path="/admin-page/catPac">
+            <Pacientes />
           </Route>
           <Route exact path="/admin-page/catVac">
             <Vacunas />

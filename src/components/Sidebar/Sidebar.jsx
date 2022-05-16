@@ -28,8 +28,10 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Catálogos</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
-              <PetsIcon className="sidebarIcons" />
-              Pacientes
+              <a href="http://localhost:3000/admin-page/catPac">
+                <PetsIcon className="sidebarIcons" />
+                Pacientes
+              </a>
             </li>
             <li className="sidebarListItem">
               <a href="http://localhost:3000/admin-page/catVac">
