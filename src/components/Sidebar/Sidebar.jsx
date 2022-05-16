@@ -17,8 +17,10 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Usuarios</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
-              <GroupIcon className="sidebarIcons" />
-              Administración de usuarios
+              <a href="http://localhost:3000/admin-page/">
+                <GroupIcon className="sidebarIcons" />
+                Administración de usuarios
+              </a>
             </li>
           </ul>
         </div>
@@ -30,8 +32,10 @@ export default function Sidebar() {
               Pacientes
             </li>
             <li className="sidebarListItem">
-              <VaccinesIcon className="sidebarIcons" />
-              Vacunas
+              <a href="http://localhost:3000/admin-page/catVac">
+                <VaccinesIcon className="sidebarIcons" />
+                Vacunas
+              </a>
             </li>
             <li className="sidebarListItem">
               <InventoryIcon className="sidebarIcons" />
