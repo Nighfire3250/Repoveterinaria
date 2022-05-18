@@ -40,16 +40,22 @@ export default function Sidebar() {
               </a>
             </li>
             <li className="sidebarListItem">
-              <InventoryIcon className="sidebarIcons" />
-              Productos
+              <a href="http://localhost:3000/admin-page/catPro">
+                <InventoryIcon className="sidebarIcons" />
+                Productos
+              </a>
             </li>
             <li className="sidebarListItem">
-              <LocalShippingIcon className="sidebarIcons" />
-              Proveedores
+              <a href="http://localhost:3000/admin-page/catProv">
+                <LocalShippingIcon className="sidebarIcons" />
+                Proveedores
+              </a>
             </li>
             <li className="sidebarListItem">
-              <ManIcon className="sidebarIcons" />
-              Roles
+              <a href="http://localhost:3000/admin-page/catRol">
+                <ManIcon className="sidebarIcons" />
+                Roles
+              </a>
             </li>
           </ul>
         </div>
