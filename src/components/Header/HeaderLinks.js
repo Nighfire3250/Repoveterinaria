@@ -14,6 +14,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 // @material-ui/icons
 import { AccountBox, MenuBook, Home, AdminPanelSettings } from "@material-ui/icons";
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 // core components
 //import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
@@ -46,6 +47,21 @@ export default function HeaderLinks() {
           className={classes.navLink}
         > <MenuBook className={classes.icons} /> Historial de Pacientes
         </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+        id="shoppingCar"
+        title="Carrito de Compras"
+        placement={window.innerWidth > 959 ? "top" : "left"}
+        classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            color="transparent"
+            className={classes.navLink}
+          >
+            <ShoppingCartIcon className={classes.icons} /> Carrito
+          </Button>
+        </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button

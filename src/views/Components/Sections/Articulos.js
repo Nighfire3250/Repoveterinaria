@@ -25,7 +25,9 @@ const Articulos = () => {
           }}
         >
           <div className="text-container">
-            <p>Comida</p>
+            <a>
+              <p>Comida</p>
+            </a>
           </div>
         </div>
         <div
