@@ -12,6 +12,7 @@ import Pacientes from "./Sections/Catalogos/CatPacientes.jsx";
 import Productos from "./Sections/Catalogos/CatProductos.jsx";
 import Proveedores from "./Sections/Catalogos/CatProveedores.jsx";
 import Roles from "./Sections/Catalogos/CatRoles.jsx";
+import User from "./Sections/editPages/SectionEdit.jsx";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export default function AdminPage(props) {
@@ -45,6 +46,9 @@ export default function AdminPage(props) {
           </Route>
           <Route exact path="/admin-page/catRol">
             <Roles />
+          </Route>
+          <Route exact path="/admin-page/:userId">
+            <User />
           </Route>
         </Switch>
       </div>

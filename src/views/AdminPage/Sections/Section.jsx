@@ -4,6 +4,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import "./Section.scss";
 import { userRows } from "../../../dummyData.js";
 import { Link } from "react-router-dom";
+import AddBoxIcon from "@mui/icons-material/AddBox";
 
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
@@ -38,6 +39,9 @@ const columns = [
 export default function Section() {
   return (
     <div className="home">
+      <button className="addUserButton">
+        <AddBoxIcon className="addIcon" /> Agregar Usuario
+      </button>
       <DataGrid
         rows={userRows}
         disableSelectionOnClick
