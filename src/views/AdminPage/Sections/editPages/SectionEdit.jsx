@@ -5,6 +5,7 @@ import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import BadgeIcon from "@mui/icons-material/Badge";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import SmartphoneIcon from "@mui/icons-material/Smartphone";
+import PublishIcon from "@mui/icons-material/Publish";
 
 export default function SectionEdit() {
   return (
@@ -42,7 +43,105 @@ export default function SectionEdit() {
             </div>
           </div>
         </div>
-        <div className="userUpdate"></div>
+        <div className="userUpdate">
+          <span className="userUpdateTitle">Editar</span>
+          <form className="userUpdateForm">
+            <div className="userUpdateLeft">
+              <div className="userUpdateItem">
+                <label>Nombre</label>
+                <input
+                  type="text"
+                  placeholder="Jon"
+                  className="userUpdateInput"
+                ></input>
+              </div>
+              <div className="userUpdateItem">
+                <label>Apellido</label>
+                <input
+                  type="text"
+                  placeholder="Snow"
+                  className="userUpdateInput"
+                ></input>
+              </div>
+              <div className="userUpdateItem">
+                <label>Dirección</label>
+                <input
+                  type="text"
+                  placeholder="Bello Amanecer"
+                  className="userUpdateInput"
+                ></input>
+              </div>
+              <div className="userUpdateItem">
+                <label>Contraseña</label>
+                <input
+                  type="password"
+                  placeholder="***"
+                  className="userUpdateInput"
+                ></input>
+              </div>
+            </div>
+            <div className="userUpdateRight">
+              <div className="userUpdateUpload">
+                <img className="UserUpdateImg" src={team1} alt="" />
+                <label htmlFor="file">
+                  <PublishIcon className="userUpdateIcon" />
+                </label>
+                <input type="file" id="file" style={{ display: "none" }} />
+              </div>
+              <button className="userUpdateButton">Actualizar</button>
+            </div>
+          </form>
+          <span className="userUpdateTitle">Roles</span>
+          <form className="userUpdateForm">
+            <div className="userUpdateLeft">
+              <div className="userUpdateBox">
+                <label>Adminstrador</label>
+                <input
+                  type="checkbox"
+                  value="administrador"
+                  className="userUpdateInputBox"
+                />
+              </div>
+              <div className="userUpdateBox">
+                <label>Veterinario</label>
+                <input
+                  type="checkbox"
+                  value="veterinario"
+                  className="userUpdateInputBox"
+                />
+              </div>
+              <div className="userUpdateBox">
+                <label>Cliente</label>
+                <input
+                  type="checkbox"
+                  value="veterinario"
+                  className="userUpdateInputBox"
+                />
+              </div>
+            </div>
+          </form>
+          <span className="userUpdateTitle">Bloqueado</span>
+          <form className="userUpdateForm">
+            <div className="userUpdateLeft">
+              <div className="userUpdateBox">
+                <label>Si</label>
+                <input
+                  type="checkbox"
+                  value="administrador"
+                  className="userUpdateInputBox"
+                />
+              </div>
+              <div className="userUpdateBox">
+                <label>No</label>
+                <input
+                  type="checkbox"
+                  value="veterinario"
+                  className="userUpdateInputBox"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
