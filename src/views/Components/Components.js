@@ -21,6 +21,18 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
+  const getData = async (url) => {
+    const newData = await fetch(url, {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+        Accept: "application/json",
+      },
+    }).then((res) => res.json());
+    console.log(newData);
+  };
+
+  getData("/api");
   const classes = useStyles();
   const { ...rest } = props;
   return (
