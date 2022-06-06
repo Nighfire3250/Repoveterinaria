@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/display-name */
-import React from "react";
+import React, { useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import "./Section.scss";
 import { userRows } from "../../../dummyData.js";
@@ -11,12 +12,6 @@ const columns = [
   { field: "firstName", headerName: "Nombre", width: 160 },
   { field: "usuario", headerName: "Usuario", width: 130 },
   { field: "rol", headerName: "Rol", width: 130 },
-  {
-    field: "edad",
-    headerName: "Edad",
-    type: "number",
-    width: 90,
-  },
   {
     field: "estado",
     headerName: "Bloqueado",
@@ -37,14 +32,53 @@ const columns = [
 ];
 
 export default function Section() {
+  const [returnedData, setReturnedData] = useState(["hello"]);
+  const [employee, setEmployee] = useState({
+    idUsuario: 0,
+    nombre: "",
+    nomUsuario: "",
+    rol: "",
+    estado: "",
+  });
+
+  const fetchData = async () => {
+    console.log(employee);
+    const newData = await fetch("/api", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        id: employee.idUsuario,
+        firstName: employee.nombre,
+        usuario: employee.nomUsuario,
+        rol: employee.rol,
+        estado: employee.estado,
+      }),
+    }).then((res) => res.json());
+    console.log(newData);
+    // eslint-disable-next-line no-undef
+    setReturnedData(newData[0]);
+    console.log(newData);
+  };
+
+  const rowData = [
+    {
+      id: returnedData.idUsuario,
+    },
+  ];
+
   return (
     <div className="home">
-      <button className="addUserButton">
-        <AddBoxIcon className="addIcon" /> Agregar Usuario
+      <button className="addUserButton" onClick={() => fetchData("/api")}>
+        <AddBoxIcon className="addIcon" />
+        Agregar Usuario
       </button>
       <DataGrid
-        rows={userRows}
+        rows={rowData}
         disableSelectionOnClick
+        getRowId={(row) => row._id}
         columns={columns}
         pageSize={9}
         rowsPerPageOptions={[9]}

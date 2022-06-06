@@ -5,7 +5,9 @@ const config = require("./dbConfig"),
 const getEmployees = async () => {
   try {
     let pool = await sql.connect(config);
-    let employees = pool.request().query("SELECT * FROM CAT_USUARIO");
+    let employees = pool
+      .request()
+      .query("SELECT idUsuario,nombre,nomUsuario,rol,estado FROM CAT_USUARIO");
     console.log(employees);
     return employees;
   } catch (error) {
