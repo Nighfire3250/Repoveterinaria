@@ -26,7 +26,7 @@ app.post("/quit", function (req, res) {
 });
 
 dbOperation.getEmployees().then((res) => {
- console.log(res);
+  console.log(res);
 });
 
 app.listen(API_PORT, () => console.log(`Listening on port ${API_PORT}`));
