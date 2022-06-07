@@ -40,7 +40,6 @@ export default function Section() {
     rol: "",
     estado: "",
   });
-
   const fetchData = async () => {
     console.log(employee);
     const newData = await fetch("/api", {
@@ -65,20 +64,24 @@ export default function Section() {
 
   const rowData = [
     {
-      id: returnedData.idUsuario,
+      id: 1,
+      rol: "Administrador",
+      usuario: "user1",
+      firstName: "Jon",
+      edad: 35,
+      estado: "No",
     },
   ];
 
   return (
     <div className="home">
-      <button className="addUserButton" onClick={() => fetchData("/api")}>
+      <button className="addUserButton">
         <AddBoxIcon className="addIcon" />
         Agregar Usuario
       </button>
       <DataGrid
         rows={rowData}
         disableSelectionOnClick
-        getRowId={(row) => row._id}
         columns={columns}
         pageSize={9}
         rowsPerPageOptions={[9]}

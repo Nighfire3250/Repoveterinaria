@@ -7,7 +7,9 @@ const getEmployees = async () => {
     let pool = await sql.connect(config);
     let employees = pool
       .request()
-      .query("SELECT idUsuario,nombre,nomUsuario,rol,estado FROM CAT_USUARIO");
+      .query(
+        "SELECT idUsuario,nombre,nomUsuario,rol,estado FROM CAT_USUARIO WHERE idUsuario = 1"
+      );
     console.log(employees);
     return employees;
   } catch (error) {
