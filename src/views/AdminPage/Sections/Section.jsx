@@ -6,6 +6,7 @@ import "./Section.scss";
 import { userRows } from "../../../dummyData.js";
 import { Link } from "react-router-dom";
 import AddBoxIcon from "@mui/icons-material/AddBox";
+import EditIcon from "@mui/icons-material/Edit";
 
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
@@ -24,7 +25,9 @@ const columns = [
     renderCell: (params) => {
       return (
         <Link to={"/admin-page/" + params.row.id}>
-          <button className="usersListEdit">Editar</button>
+          <button className="usersListEdit">
+            <EditIcon />
+          </button>
         </Link>
       );
     },
@@ -34,7 +37,7 @@ const columns = [
 export default function Section() {
   const [returnedData, setReturnedData] = useState(["hello"]);
   const [employee, setEmployee] = useState({
-    idUsuario: 0,
+    idUsuario: 1,
     nombre: "",
     nomUsuario: "",
     rol: "",
@@ -58,24 +61,22 @@ export default function Section() {
     }).then((res) => res.json());
     console.log(newData);
     // eslint-disable-next-line no-undef
+    console.log(newData[0]);
     setReturnedData(newData[0]);
-    console.log(newData);
   };
 
   const rowData = [
     {
-      id: 1,
-      rol: "Administrador",
-      usuario: "user1",
-      firstName: "Jon",
-      edad: 35,
-      estado: "No",
+      id: employee.idUsuario,
+      rol: returnedData.rol,
+      usuario: returnedData.nomUsuario,
+      firstName: returnedData.nombre,
+      estado: returnedData.estado,
     },
   ];
-
   return (
     <div className="home">
-      <button className="addUserButton">
+      <button className="addUserButton" onClick={() => fetchData()}>
         <AddBoxIcon className="addIcon" />
         Agregar Usuario
       </button>

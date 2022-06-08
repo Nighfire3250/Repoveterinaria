@@ -1,4 +1,6 @@
-import React from "react";
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
 import "./SectionEdit.scss";
 import team1 from "assets/img/faces/snow.jpg";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
@@ -8,6 +10,36 @@ import SmartphoneIcon from "@mui/icons-material/Smartphone";
 import PublishIcon from "@mui/icons-material/Publish";
 
 export default function SectionEdit() {
+  const [returnedData, setReturnedData] = useState(["hello"]);
+  const [employee, setEmployee] = useState({
+    idUsuario: 1,
+    nombre: "",
+    nomUsuario: "",
+    rol: "",
+    estado: "",
+  });
+  const fetchData = async () => {
+    console.log(employee);
+    const newData = await fetch("/api", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        id: employee.idUsuario,
+        firstName: employee.nombre,
+        usuario: employee.nomUsuario,
+        rol: employee.rol,
+        estado: employee.estado,
+      }),
+    }).then((res) => res.json());
+    console.log(newData);
+    // eslint-disable-next-line no-undef
+    console.log(newData[0]);
+    setReturnedData(newData[0]);
+  };
+  () => fetchData();
   return (
     <div className="sectionEdit">
       <div className="sectionTitleContainer">
@@ -18,19 +50,19 @@ export default function SectionEdit() {
           <div className="userShowTop">
             <img className="userShowImg" src={team1} alt="" />
             <div className="userShotTopTitle">
-              <span className="userShowName">Jon Snow</span>
-              <span className="userShowUsername">user1</span>
+              <span className="userShowName">{returnedData.nombre} {returnedData.apellido}</span>
+              <span className="userShowUsername">{returnedData.nomUsuario}</span>
             </div>
           </div>
           <div className="userShowBottom">
             <span className="userShowTitle">Detalle de cuenta</span>
             <div className="userShowInfo">
               <PermIdentityIcon className="userShowIcon" />
-              <span className="userShowInfoTitle">UsuarioJon</span>
+              <span className="userShowInfoTitle">{returnedData.nomUsuario}</span>
             </div>
             <div className="userShowInfo">
               <BadgeIcon className="userShowIcon" />
-              <span className="userShowInfoTitle">Administrador</span>
+              <span className="userShowInfoTitle">{returnedData.rol}</span>
             </div>
             <span className="userShowTitle">Contacto</span>
             <div className="userShowInfo">
@@ -51,7 +83,7 @@ export default function SectionEdit() {
                 <label>Nombre</label>
                 <input
                   type="text"
-                  placeholder="Jon"
+                  placeholder="Jairo"
                   className="userUpdateInput"
                 ></input>
               </div>
@@ -59,7 +91,7 @@ export default function SectionEdit() {
                 <label>Apellido</label>
                 <input
                   type="text"
-                  placeholder="Snow"
+                  placeholder="Montiel"
                   className="userUpdateInput"
                 ></input>
               </div>
