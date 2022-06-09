@@ -17,6 +17,22 @@ const getEmployees = async () => {
   }
 };
 
+const loginEmployees = async () => {
+  try {
+    let pool = await sql.connect(config);
+    let employees = await pool
+      .request()
+      .query(
+        "SELECT nomUsuario,rol,estado FROM CAT_USUARIO WHERE nomUsuario = 'jmontiel14' and contraseña = 'admin14*'"
+      );
+    console.log(employees);
+    return employees;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 module.exports = {
   getEmployees,
+  loginEmployees,
 };

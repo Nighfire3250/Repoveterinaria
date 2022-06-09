@@ -13,8 +13,11 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
 import { AccountBox, MenuBook, Home, AdminPanelSettings } from "@material-ui/icons";
+import LogoutIcon from "@mui/icons-material/Logout";
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+import { rol } from "../../views/LoginPage/LoginPage";
 
 // core components
 //import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
@@ -22,12 +25,17 @@ import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 
+export let rolActual = "";
 const useStyles = makeStyles(styles);
-let rol = "Administrador"
 
 export default function HeaderLinks() {
   const classes = useStyles();
-  if (rol == "Administrador") {
+  if (rolActual == rol){
+    rolActual="";
+  }else{
+    rolActual=rol;
+  }
+  if (rolActual == "Administrador") {
     return (
       <List className={classes.list}>
         <ListItem className={classes.listItem}>
@@ -67,11 +75,11 @@ export default function HeaderLinks() {
         </ListItem>
         <ListItem className={classes.listItem}>
           <Button
-            href="http://localhost:3000/login-page"
+            href="http://localhost:3000"
             color="transparent"
             className={classes.navLink}
           >
-            <AccountBox className={classes.icons} /> Iniciar Sesion
+            <LogoutIcon className={classes.icons} /> Cerrar Sesión
           </Button>
         </ListItem>
         <ListItem className={classes.listItem}>
@@ -128,7 +136,7 @@ export default function HeaderLinks() {
       </List>
     );
   }
-  if (rol == "Veterinario") {
+  if (rolActual == "Veterinario") {
     return (
       <List className={classes.list}>
         <ListItem className={classes.listItem}>
@@ -147,11 +155,12 @@ export default function HeaderLinks() {
         </ListItem>
         <ListItem className={classes.listItem}>
           <Button
-            href="http://localhost:3000/login-page"
+            href="http://localhost:3000"
             color="transparent"
             className={classes.navLink}
+            onClick={rolActual=""}
           >
-            <AccountBox className={classes.icons} /> Iniciar Sesion
+            <LogoutIcon className={classes.icons} /> Cerrar Sesión
           </Button>
         </ListItem>
         <ListItem className={classes.listItem}>
@@ -208,7 +217,7 @@ export default function HeaderLinks() {
       </List>
     );
   }
-  if (rol == "Cliente") {
+  if (rolActual == "Cliente") {
     return (
       <List className={classes.list}>
         <ListItem className={classes.listItem}>
@@ -236,11 +245,11 @@ export default function HeaderLinks() {
         </ListItem>
         <ListItem className={classes.listItem}>
           <Button
-            href="http://localhost:3000/login-page"
+            href="http://localhost:3000"
             color="transparent"
             className={classes.navLink}
           >
-            <AccountBox className={classes.icons} /> Iniciar Sesion
+            <LogoutIcon className={classes.icons} /> Cerrar Sesión
           </Button>
         </ListItem>
         <ListItem className={classes.listItem}>
@@ -297,7 +306,7 @@ export default function HeaderLinks() {
       </List>
     );
   }
-  if (rol == "") {
+  if (rolActual == "") {
     return (
       <List className={classes.list}>
         <ListItem className={classes.listItem}>

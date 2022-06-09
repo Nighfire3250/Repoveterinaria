@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -24,8 +25,10 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/bg7.jpg";
+import { rolSalir } from "../../components/Header/HeaderLinks";
 
 const useStyles = makeStyles(styles);
+export const rol = "Veterinario";
 
 export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
