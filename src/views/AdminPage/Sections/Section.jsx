@@ -7,6 +7,7 @@ import { userRows } from "../../../dummyData.js";
 import { Link } from "react-router-dom";
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import EditIcon from "@mui/icons-material/Edit";
+import ReplayIcon from "@mui/icons-material/Replay";
 
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
@@ -76,9 +77,14 @@ export default function Section() {
   ];
   return (
     <div className="home">
-      <button className="addUserButton" onClick={() => fetchData()}>
-        <AddBoxIcon className="addIcon" />
-        Agregar Usuario
+      <Link to="/admin-page/crearUsuario">
+        <button className="addUserButton">
+          <AddBoxIcon className="addIcon" />
+          Agregar Usuario
+        </button>
+      </Link>
+      <button className="createUserButton" onClick={() => fetchData()}>
+        <ReplayIcon className="addIcon" />
       </button>
       <DataGrid
         rows={rowData}

@@ -22,19 +22,14 @@ import { rol } from "../../views/LoginPage/LoginPage";
 // core components
 //import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
+import { rolPrincipio, asignarRol, quitarRol } from "../../loginData";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 
-export let rolActual = "";
 const useStyles = makeStyles(styles);
-
+const rolActual="Administrador"
 export default function HeaderLinks() {
   const classes = useStyles();
-  if (rolActual == rol){
-    rolActual="";
-  }else{
-    rolActual=rol;
-  }
   if (rolActual == "Administrador") {
     return (
       <List className={classes.list}>
@@ -136,7 +131,7 @@ export default function HeaderLinks() {
       </List>
     );
   }
-  if (rolActual == "Veterinario") {
+  else if (rolActual == "Veterinario") {
     return (
       <List className={classes.list}>
         <ListItem className={classes.listItem}>
@@ -158,7 +153,7 @@ export default function HeaderLinks() {
             href="http://localhost:3000"
             color="transparent"
             className={classes.navLink}
-            onClick={rolActual=""}
+            onClick={quitarRol()}
           >
             <LogoutIcon className={classes.icons} /> Cerrar Sesión
           </Button>
@@ -217,7 +212,7 @@ export default function HeaderLinks() {
       </List>
     );
   }
-  if (rolActual == "Cliente") {
+  else if (rolActual == "Cliente") {
     return (
       <List className={classes.list}>
         <ListItem className={classes.listItem}>
@@ -306,7 +301,80 @@ export default function HeaderLinks() {
       </List>
     );
   }
-  if (rolActual == "") {
+  else if (rolActual == "") {
+    return (
+      <List className={classes.list}>
+        <ListItem className={classes.listItem}>
+          <Button
+            href="http://localhost:3000"
+            color="transparent"
+            className={classes.navLink}
+          > <Home className={classes.icons} /> Inicio
+          </Button>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Button
+            href="http://localhost:3000/login-page"
+            color="transparent"
+            className={classes.navLink}
+          >
+            <AccountBox className={classes.icons} /> Iniciar Sesion
+          </Button>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Tooltip
+            id="instagram-twitter"
+            title="Síguenos en twitter"
+            placement={window.innerWidth > 959 ? "top" : "left"}
+            classes={{ tooltip: classes.tooltip }}
+          >
+            <Button
+              href="https://twitter.com/CreativeTim?ref=creativetim"
+              target="_blank"
+              color="transparent"
+              className={classes.navLink}
+            >
+              <i className={classes.socialIcons + " fab fa-twitter"} />
+            </Button>
+          </Tooltip>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Tooltip
+            id="instagram-facebook"
+            title="Síguenos en facebook"
+            placement={window.innerWidth > 959 ? "top" : "left"}
+            classes={{ tooltip: classes.tooltip }}
+          >
+            <Button
+              color="transparent"
+              href="https://www.facebook.com/CreativeTim?ref=creativetim"
+              target="_blank"
+              className={classes.navLink}
+            >
+              <i className={classes.socialIcons + " fab fa-facebook"} />
+            </Button>
+          </Tooltip>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Tooltip
+            id="instagram-tooltip"
+            title="Síguenos en instagram"
+            placement={window.innerWidth > 959 ? "top" : "left"}
+            classes={{ tooltip: classes.tooltip }}
+          >
+            <Button
+              color="transparent"
+              href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+              target="_blank"
+              className={classes.navLink}
+            >
+              <i className={classes.socialIcons + " fab fa-instagram"} />
+            </Button>
+          </Tooltip>
+        </ListItem>
+      </List>
+    );
+  }else{
     return (
       <List className={classes.list}>
         <ListItem className={classes.listItem}>

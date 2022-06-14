@@ -25,10 +25,11 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/bg7.jpg";
-import { rolSalir } from "../../components/Header/HeaderLinks";
+import { rolInicial } from "../../components/Header/HeaderLinks";
+import { asignarRol } from "../../loginData";
 
 const useStyles = makeStyles(styles);
-export const rol = "Veterinario";
+export let rol = "Veterinario";
 
 export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
@@ -130,10 +131,11 @@ export default function LoginPage(props) {
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
                     <Button
-                      href="http://localhost:3000/profile-page"
+                      href="http://localhost:3000"
                       simple
                       color="primary"
                       size="lg"
+                      onClick={asignarRol}
                     >
                       Iniciar Sesión
                     </Button>

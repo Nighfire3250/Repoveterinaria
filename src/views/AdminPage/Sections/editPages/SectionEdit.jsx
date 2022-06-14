@@ -39,7 +39,6 @@ export default function SectionEdit() {
     console.log(newData[0]);
     setReturnedData(newData[0]);
   };
-  () => fetchData();
   return (
     <div className="sectionEdit">
       <div className="sectionTitleContainer">
