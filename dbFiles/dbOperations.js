@@ -44,6 +44,7 @@ const createEmployee = async (Employee) => {
        1)
       `
     );
+    console.log(employees);
     return employees;
   } catch (error) {
     console.log(error);

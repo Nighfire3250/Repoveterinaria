@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+import swal from "sweetalert";
 import validator from "validator";
 import "./createUser.scss";
 
@@ -41,9 +42,9 @@ export default function createUser () {
       // eslint-disable-next-line no-undef
       console.log(newData[0]);
       setReturnedData(newData[0]);
-      alert("Usuario creado");
+      swal("Éxito","Usuario creado","success");
     }else{
-      alert("Contraseña muy debil");
+      swal("Error","Contraseña muy debil","error");
     };
   };
   const handleChange = event => {
