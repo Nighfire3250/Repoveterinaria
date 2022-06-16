@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
 const { TRUE } = require("node-sass");
 const config = require("./dbConfig"),
@@ -31,6 +32,34 @@ const loginEmployees = async () => {
   }
 };
 
+const login = async () => {
+  try {
+    let pool = await sql.connect(config);
+    let employees = await pool
+      .request()
+      .query(
+        `UPDATE CAT_USUARIO SET logEstate = 1 WHERE nomUsuario = 'Jairo'`
+      );
+    return employees;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const logout = async () => {
+  try {
+    let pool = await sql.connect(config);
+    let employees = await pool
+      .request()
+      .query(
+        `UPDATE CAT_USUARIO SET logEstate = 0 WHERE nomUsuario = 'Jairo'`
+      );
+    return employees;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const createEmployee = async (Employee) => {
   try {
     let pool = await sql.connect(config);
@@ -55,4 +84,6 @@ module.exports = {
   getEmployees,
   loginEmployees,
   createEmployee,
+  login,
+  logout,
 };
