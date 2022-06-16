@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React from "react";
+import React, { useState } from "react";
 //import DeleteIcon from "@material-ui/icons/Delete";
 //import IconButton from "@material-ui/core/IconButton";
 // react components for routing our app without refresh
@@ -27,10 +27,114 @@ import { rolPrincipio, asignarRol, quitarRol } from "../../loginData";
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 
 const useStyles = makeStyles(styles);
-const rolActual="Administrador"
+const rolActual=""
 export default function HeaderLinks() {
   const classes = useStyles();
-  if (rolActual == "Administrador") {
+  const [returnedData, setReturnedData] = useState(["hello"]);
+  const [employee, setEmployee] = useState({
+    idUsuario: 1,
+    nombre: "",
+    nomUsuario: "",
+    rol: "",
+    estado: "",
+  });
+  const fetchData = async () => {
+    console.log(employee);
+    const newData = await fetch("/logApi", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        id: employee.idUsuario,
+        firstName: employee.nombre,
+        usuario: employee.nomUsuario,
+        rol: employee.rol,
+        estado: employee.estado,
+      }),
+    }).then((res) => res.json());
+    console.log(newData);
+    // eslint-disable-next-line no-undef
+    console.log(newData[0]);
+    setReturnedData(newData[0]);
+  };
+  window.onload = fetchData;
+  if (returnedData === undefined){
+    return (
+      <List className={classes.list}>
+        <ListItem className={classes.listItem}>
+          <Button
+            href="http://localhost:3000"
+            color="transparent"
+            className={classes.navLink}
+          > <Home className={classes.icons} /> Inicio
+          </Button>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Button
+            href="http://localhost:3000/login-page"
+            color="transparent"
+            className={classes.navLink}
+          >
+            <AccountBox className={classes.icons} /> Iniciar Sesion
+          </Button>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Tooltip
+            id="instagram-twitter"
+            title="Síguenos en twitter"
+            placement={window.innerWidth > 959 ? "top" : "left"}
+            classes={{ tooltip: classes.tooltip }}
+          >
+            <Button
+              href="https://twitter.com/CreativeTim?ref=creativetim"
+              target="_blank"
+              color="transparent"
+              className={classes.navLink}
+            >
+              <i className={classes.socialIcons + " fab fa-twitter"} />
+            </Button>
+          </Tooltip>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Tooltip
+            id="instagram-facebook"
+            title="Síguenos en facebook"
+            placement={window.innerWidth > 959 ? "top" : "left"}
+            classes={{ tooltip: classes.tooltip }}
+          >
+            <Button
+              color="transparent"
+              href="https://www.facebook.com/CreativeTim?ref=creativetim"
+              target="_blank"
+              className={classes.navLink}
+            >
+              <i className={classes.socialIcons + " fab fa-facebook"} />
+            </Button>
+          </Tooltip>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Tooltip
+            id="instagram-tooltip"
+            title="Síguenos en instagram"
+            placement={window.innerWidth > 959 ? "top" : "left"}
+            classes={{ tooltip: classes.tooltip }}
+          >
+            <Button
+              color="transparent"
+              href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+              target="_blank"
+              className={classes.navLink}
+            >
+              <i className={classes.socialIcons + " fab fa-instagram"} />
+            </Button>
+          </Tooltip>
+        </ListItem>
+      </List>
+    );
+  }
+  else if (returnedData.rol == "Administrador") {
     return (
       <List className={classes.list}>
         <ListItem className={classes.listItem}>
@@ -131,7 +235,7 @@ export default function HeaderLinks() {
       </List>
     );
   }
-  else if (rolActual == "Veterinario") {
+  else if (returnedData.rol == "Veterinario") {
     return (
       <List className={classes.list}>
         <ListItem className={classes.listItem}>
@@ -212,7 +316,7 @@ export default function HeaderLinks() {
       </List>
     );
   }
-  else if (rolActual == "Cliente") {
+  else if (returnedData.rol == "Cliente") {
     return (
       <List className={classes.list}>
         <ListItem className={classes.listItem}>
@@ -301,7 +405,7 @@ export default function HeaderLinks() {
       </List>
     );
   }
-  else if (rolActual == "") {
+  else if (returnedData.rol == "") {
     return (
       <List className={classes.list}>
         <ListItem className={classes.listItem}>

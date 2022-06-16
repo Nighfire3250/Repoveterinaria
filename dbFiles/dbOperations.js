@@ -23,7 +23,7 @@ const loginEmployees = async () => {
     let employees = await pool
       .request()
       .query(
-        "SELECT nomUsuario,rol,estado FROM CAT_USUARIO WHERE nomUsuario = 'jmontiel14' and contraseña = 'admin14*'"
+        "SELECT idUsuario,nombre,apellido,nomUsuario,rol,estado FROM CAT_USUARIO WHERE logEstate = 1"
       );
     return employees;
   } catch (error) {

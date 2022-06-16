@@ -39,6 +39,7 @@ export default function SectionEdit() {
     console.log(newData[0]);
     setReturnedData(newData[0]);
   };
+  window.onload = fetchData;
   return (
     <div className="sectionEdit">
       <div className="sectionTitleContainer">
@@ -119,7 +120,7 @@ export default function SectionEdit() {
                 </label>
                 <input type="file" id="file" style={{ display: "none" }} />
               </div>
-              <button className="userUpdateButton">Actualizar</button>
+              <button className="userUpdateButton" onClick={() => fetchData()} >Actualizar</button>
             </div>
           </form>
           <span className="userUpdateTitle">Roles</span>

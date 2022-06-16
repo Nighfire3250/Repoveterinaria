@@ -65,7 +65,7 @@ export default function Section() {
     console.log(newData[0]);
     setReturnedData(newData[0]);
   };
-
+  window.onload = fetchData;
   const rowData = [
     {
       id: employee.idUsuario,
