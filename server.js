@@ -29,6 +29,20 @@ app.post("/logApi", async (req, res) => {
   res.send(result.recordset);
 });
 
+app.post("/logIn", async (req, res) => {
+  console.log("called");
+  const result = await dbOperation.loginEmployees(req.body.name);
+  console.log(result.recordset);
+  res.send(result.recordset);
+});
+
+app.post("/logOut", async (req, res) => {
+  console.log("called");
+  const result = await dbOperation.loginEmployees(req.body.name);
+  console.log(result.recordset);
+  res.send(result.recordset);
+});
+
 app.post("/hello", async (req, res) => {
   console.log("called create");
   await dbOperation.createEmployee(req.body);
