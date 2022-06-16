@@ -11,7 +11,7 @@ export default function createUser () {
   const [employee, setEmployee] = useState({
     nombre: "",
     apellido:"",
-    nomUsuario: "",
+    usuario: "",
     rol: "",
     contrasena: "",
     direccion:"",
@@ -20,28 +20,31 @@ export default function createUser () {
   const setInput = (e) => {
     const {name,value} = e.target;
     console.log(value);
+    setEmployee(prevState => ({
+      ...prevState,
+      [name]:value
+    }));
   }
-
-  const fetchData = async () => {
-    console.log(employee);
-    const newData = await fetch("/api", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        id: employee.idUsuario,
-        firstName: employee.nombre,
-        usuario: employee.nomUsuario,
-        rol: employee.rol,
-        estado: employee.estado,
-      }),
-    }).then((res) => res.json());
-    console.log(newData);
-    // eslint-disable-next-line no-undef
-    console.log(newData[0]);
-    setReturnedData(newData[0]);
+  const createData = async () => {
+    if (errorMessage === "Is Strong Password") {
+      console.log(employee);
+      const newData = await fetch("/hello", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...employee
+        }),
+      }).then((res) => res.json());
+      // eslint-disable-next-line no-undef
+      console.log(newData[0]);
+      setReturnedData(newData[0]);
+      alert("Usuario creado");
+    }else{
+      alert("Contraseña muy debil");
+    };
   };
   const handleChange = event => {
     const result = event.target.value.replace(/[^a-z]/gi, '');
@@ -68,15 +71,15 @@ export default function createUser () {
             <form className="newUserForm">
                 <div className="newUserItem">
                     <label>Nombre Usuario</label>
-                    <input type="text" name="usuario" placeholder="Usuario" value={message} onChange={setInput}></input>
+                    <input type="text" name="usuario" placeholder="Usuario" onChange={setInput}></input>
                 </div>
                 <div className="newUserItem">
                     <label>Nombre</label>
-                    <input type="text" name="nombre" placeholder="Nombre" onChange={handleChange}></input>
+                    <input type="text" name="nombre" placeholder="Nombre" onChange={setInput}></input>
                 </div>
                 <div className="newUserItem">
                     <label>Apellido</label>
-                    <input type="text" name="apellido" placeholder="Apellido" onChange={handleChange}></input>
+                    <input type="text" name="apellido" placeholder="Apellido" onChange={setInput}></input>
                 </div>
                 <div className="newUserItem">
                     <label>Contraseña</label>
@@ -99,6 +102,7 @@ export default function createUser () {
                           type="checkbox"
                           value="Administrador"
                           className="userUpdateInputBox"
+                          name="rol"
                           onChange={setInput}
                         />
                     </div>
@@ -108,6 +112,7 @@ export default function createUser () {
                           type="checkbox"
                           value="Veterinario"
                           className="userUpdateInputBox"
+                          name="rol"
                           onChange={setInput}
                     />
                     </div>
@@ -117,12 +122,13 @@ export default function createUser () {
                           type="checkbox"
                           value="Cliente"
                           className="userUpdateInputBox"
+                          name="rol"
                           onChange={setInput}
                         />
                     </div>
                 </div>
             <div className="buttonUser">
-                    <button className="newUserButton">Crear</button>
+                    <button className="newUserButton" onClick={() => createData()}>Crear</button>
             </div>
         </div>
     );
