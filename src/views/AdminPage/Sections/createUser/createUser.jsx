@@ -100,7 +100,7 @@ export default function createUser () {
                     <div className="userUpdateBox">
                         <label>Adminstrador</label>
                         <input 
-                          type="checkbox"
+                          type="radio"
                           value="Administrador"
                           className="userUpdateInputBox"
                           name="rol"
@@ -110,7 +110,7 @@ export default function createUser () {
                     <div className="userUpdateBox">
                         <label>Veterinario</label>
                         <input
-                          type="checkbox"
+                          type="radio"
                           value="Veterinario"
                           className="userUpdateInputBox"
                           name="rol"
@@ -120,7 +120,7 @@ export default function createUser () {
                     <div className="userUpdateBox">
                         <label>Cliente</label>
                         <input
-                          type="checkbox"
+                          type="radio"
                           value="Cliente"
                           className="userUpdateInputBox"
                           name="rol"

@@ -11,6 +11,16 @@ import PublishIcon from "@mui/icons-material/Publish";
 
 export default function SectionEdit() {
   const [returnedData, setReturnedData] = useState(["hello"]);
+  const [isChecked, setIsChecked] = useState(false);
+  const [gender, setGender] = useState("Male");
+
+  function onChangeValue(event) {
+    setGender(event.target.value);
+    console.log(event.target.value);
+  }
+  const handleOnChange = () => {
+    setIsChecked(!isChecked);
+  };
   const [employee, setEmployee] = useState({
     idUsuario: 1,
     nombre: "",
@@ -126,51 +136,48 @@ export default function SectionEdit() {
           <span className="userUpdateTitle">Roles</span>
           <form className="userUpdateForm">
             <div className="userUpdateLeft">
-              <div className="userUpdateBox">
                 <label>Adminstrador</label>
                 <input
-                  type="checkbox"
-                  value="administrador"
+                  type="radio"
+                  value="Administrador"
+                  name="rol"
                   className="userUpdateInputBox"
                 />
-              </div>
-              <div className="userUpdateBox">
                 <label>Veterinario</label>
                 <input
-                  type="checkbox"
-                  value="veterinario"
+                  type="radio"
+                  value="Veterinario"
+                  name="rol"
+                  onChange={handleOnChange}
                   className="userUpdateInputBox"
                 />
-              </div>
-              <div className="userUpdateBox">
                 <label>Cliente</label>
                 <input
-                  type="checkbox"
-                  value="veterinario"
+                  type="radio"
+                  value="Cliente"
+                  name="rol"
+                  onChange={handleOnChange}
                   className="userUpdateInputBox"
                 />
-              </div>
             </div>
           </form>
           <span className="userUpdateTitle">Bloqueado</span>
           <form className="userUpdateForm">
             <div className="userUpdateLeft">
-              <div className="userUpdateBox">
                 <label>Si</label>
                 <input
-                  type="checkbox"
-                  value="administrador"
+                  type="radio"
+                  value="Si"
+                  name="block"
                   className="userUpdateInputBox"
                 />
-              </div>
-              <div className="userUpdateBox">
                 <label>No</label>
                 <input
-                  type="checkbox"
-                  value="veterinario"
+                  type="radio"
+                  value="No"
+                  name="block"
                   className="userUpdateInputBox"
                 />
-              </div>
             </div>
           </form>
         </div>
