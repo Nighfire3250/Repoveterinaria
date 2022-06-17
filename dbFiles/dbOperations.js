@@ -46,13 +46,13 @@ const login = async () => {
   }
 };
 
-const logout = async () => {
+const logout = async (Employee) => {
   try {
     let pool = await sql.connect(config);
     let employees = await pool
       .request()
       .query(
-        `UPDATE CAT_USUARIO SET logEstate = 0 WHERE nomUsuario = 'Jairo'`
+        `UPDATE CAT_USUARIO SET logEstate = 0 WHERE logEstate = 1`
       );
     return employees;
   } catch (error) {

@@ -30,15 +30,15 @@ app.post("/logApi", async (req, res) => {
 });
 
 app.post("/logIn", async (req, res) => {
-  console.log("called");
-  const result = await dbOperation.loginEmployees(req.body.name);
+  console.log("called login");
+  const result = await dbOperation.login(req.body.nombre);
   console.log(result.recordset);
   res.send(result.recordset);
 });
 
 app.post("/logOut", async (req, res) => {
-  console.log("called");
-  const result = await dbOperation.loginEmployees(req.body.name);
+  console.log("called logout");
+  const result = await dbOperation.logout(req.body.nombre);
   console.log(result.recordset);
   res.send(result.recordset);
 });

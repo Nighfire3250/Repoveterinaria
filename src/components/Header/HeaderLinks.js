@@ -34,7 +34,7 @@ export default function HeaderLinks() {
   const [employee, setEmployee] = useState({
     idUsuario: 1,
     nombre: "",
-    nomUsuario: "",
+    usuario: "",
     rol: "",
     estado: "",
   });
@@ -49,7 +49,7 @@ export default function HeaderLinks() {
       body: JSON.stringify({
         id: employee.idUsuario,
         firstName: employee.nombre,
-        usuario: employee.nomUsuario,
+        usuario: employee.usuario,
         rol: employee.rol,
         estado: employee.estado,
       }),
@@ -60,6 +60,25 @@ export default function HeaderLinks() {
     setReturnedData(newData[0]);
   };
   window.onload = fetchData;
+  const logoutFunction = async () => {
+    console.log(employee);
+    const newData = await fetch("/logOut", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        firstName: employee.nombre,
+        usuario: employee.usuario,
+        rol: employee.rol,
+        estado: employee.estado,
+      }),
+    }).then((res) => res.json());
+    console.log(newData);
+    // eslint-disable-next-line no-undef
+    console.log(newData[0]);
+  };
   if (returnedData === undefined){
     return (
       <List className={classes.list}>
@@ -177,6 +196,7 @@ export default function HeaderLinks() {
             href="http://localhost:3000"
             color="transparent"
             className={classes.navLink}
+            onClick={() => logoutFunction()}
           >
             <LogoutIcon className={classes.icons} /> Cerrar Sesión
           </Button>
@@ -257,7 +277,7 @@ export default function HeaderLinks() {
             href="http://localhost:3000"
             color="transparent"
             className={classes.navLink}
-            onClick={quitarRol()}
+            onClick={() => logoutFunction()}
           >
             <LogoutIcon className={classes.icons} /> Cerrar Sesión
           </Button>
@@ -347,6 +367,7 @@ export default function HeaderLinks() {
             href="http://localhost:3000"
             color="transparent"
             className={classes.navLink}
+            onClick={() => logoutFunction()}
           >
             <LogoutIcon className={classes.icons} /> Cerrar Sesión
           </Button>
