@@ -22,6 +22,13 @@ app.post("/api", async (req, res) => {
   res.send(result.recordset);
 });
 
+app.post("/apiEmployeeLogin", async (req, res) => {
+  console.log("called buscar");
+  const result = await dbOperation.getEmployeesLogin(req.body.nombre);
+  console.log(result.recordset);
+  res.send(result.recordset);
+});
+
 app.post("/logApi", async (req, res) => {
   console.log("called");
   const result = await dbOperation.loginEmployees(req.body.name);
@@ -31,8 +38,7 @@ app.post("/logApi", async (req, res) => {
 
 app.post("/logIn", async (req, res) => {
   console.log("called login");
-  const result = await dbOperation.login(req.body.nombre);
-  console.log(result.recordset);
+  const result = await dbOperation.login(req.body);
   res.send(result.recordset);
 });
 

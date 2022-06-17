@@ -18,6 +18,20 @@ const getEmployees = async () => {
   }
 };
 
+const getEmployeesLogin = async (Employee) => {
+  try {
+    let pool = await sql.connect(config);
+    let employees = await pool
+      .request()
+      .query(
+        `SELECT idUsuario,nombre,apellido,nomUsuario,contraseña,rol,estado FROM CAT_USUARIO WHERE nomUsuario = '${Employee.usuario}'`
+      );
+    return employees;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const loginEmployees = async () => {
   try {
     let pool = await sql.connect(config);
@@ -32,13 +46,14 @@ const loginEmployees = async () => {
   }
 };
 
-const login = async () => {
+const login = async (Employee) => {
   try {
+    console.log(Employee.contrasena);
     let pool = await sql.connect(config);
     let employees = await pool
       .request()
       .query(
-        `UPDATE CAT_USUARIO SET logEstate = 1 WHERE nomUsuario = 'Jairo'`
+        `UPDATE CAT_USUARIO SET logEstate = 1 WHERE nomUsuario = '${Employee.usuario}' AND contraseña = '${Employee.contrasena}'`
       );
     return employees;
   } catch (error) {
@@ -86,4 +101,5 @@ module.exports = {
   createEmployee,
   login,
   logout,
+  getEmployeesLogin,
 };

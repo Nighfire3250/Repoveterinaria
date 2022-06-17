@@ -1,5 +1,6 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -19,6 +20,8 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
+import "./LoginPage.scss";
+import swal from "sweetalert";
 
 //import Logo from "assets/img/logo.jpg";
 
@@ -33,6 +36,43 @@ export let rol = "Veterinario";
 
 export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
+  const [returnedData, setReturnedData] = useState(["hello"]);
+  const [employee, setEmployee] = useState({
+    idUsuario: 1,
+    nombre: "",
+    apellido: "",
+    usuario: "",
+    rol: "",
+    contrasena: "",
+    direccion: "",
+  });
+
+
+  const setInput = (e) => {
+    const { name, value } = e.target;
+    console.log(value);
+    setEmployee(prevState => ({
+      ...prevState,
+      [name]:value
+    }));
+  }
+
+  const loginFunction = async () => {
+    fetch("/logIn", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        ...employee
+      }),
+    });
+    window.location.href = "http://localhost:3000";
+  }
+      // eslint-disable-next-line no-undef
+
+
   setTimeout(function () {
     setCardAnimation("");
   }, 700);
@@ -95,8 +135,12 @@ export default function LoginPage(props) {
                     </div>
                   </CardHeader>
                   <CardBody>
-                    <CustomInput
+                    <label>Ingrese sus credenciales</label>
+                    <input type="text" name="usuario" placeholder="Usuario" className="userUpdateInput" onChange={setInput}></input>
+                    <input type="password" name="contrasena" placeholder="Contraseña" className="userUpdateInput" onChange={setInput}></input>
+                    {/*<CustomInput
                       labelText="Usuario..."
+                      onChange={setInput}
                       id="email"
                       formControlProps={{
                         fullWidth: true,
@@ -112,6 +156,7 @@ export default function LoginPage(props) {
                     />
                     <CustomInput
                       labelText="Contraseña..."
+                      onChange={setInput}
                       id="pass"
                       formControlProps={{
                         fullWidth: true,
@@ -127,15 +172,14 @@ export default function LoginPage(props) {
                         ),
                         autoComplete: "off",
                       }}
-                    />
+                    />*/}
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
                     <Button
-                      href="http://localhost:3000"
                       simple
                       color="primary"
                       size="lg"
-                      onClick={asignarRol}
+                      onClick = {() => loginFunction()}
                     >
                       Iniciar Sesión
                     </Button>
