@@ -184,6 +184,7 @@ export default function HeaderLinks() {
           classes={{ tooltip: classes.tooltip }}
           >
             <Button
+              href="http://localhost:3000/shoppingCar"
               color="transparent"
               className={classes.navLink}
             >
@@ -355,6 +356,7 @@ export default function HeaderLinks() {
           classes={{ tooltip: classes.tooltip }}
           >
             <Button
+              href="http://localhost:3000/shoppingCar"
               color="transparent"
               className={classes.navLink}
             >
