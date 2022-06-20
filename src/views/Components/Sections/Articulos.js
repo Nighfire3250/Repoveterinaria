@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react";
 import "assets/myComponents/Articulos.scss";
 import fondoComida from "assets/img/fondo_comida.png";
@@ -13,6 +14,8 @@ import Comida7 from "assets/img/articulos/7-Pedigree comida para perro surtida.j
 import Comida8 from "assets/img/articulos/8-Pet master alimento para cahorro.jpg";
 import Comida9 from "assets/img/articulos/9-Don gato alimento.jpg";
 import Comida10 from "assets/img/articulos/10-gati alimento.jpg";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import "./Articulos.scss";
 const Articulos = () => {
   return (
     <>
@@ -58,71 +61,141 @@ const Articulos = () => {
           <div className="img-section">
             <img className="img-articulo" src={Comida1} />
           </div>
-          <div className="title-section">precio</div>
-          <div className="description-section">descripcion</div>
+          <div className="title-section">
+            <span className="fontArticulos">Precio: 430 C$</span><br></br>
+            <span className="fontArticulos">Descripción: Goldy Nutrición Óptima 4kg</span>
+          </div>
+          <div className="description-section">
+            <button className="addCart"> 
+              <AddShoppingCartIcon className="iconCart" /> +
+            </button>
+          </div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
             <img className="img-articulo" src={Comida2} />
           </div>
-          <div className="title-section">precio</div>
-          <div className="description-section">descripcion</div>
+          <div className="title-section">
+            <span className="fontArticulos">Precio: 880 C$</span><br></br>
+            <span className="fontArticulos">Descripción: Kirkland Signature Perro Adulto 18kg</span>
+          </div>
+          <div className="description-section">
+            <button className="addCart"> 
+              <AddShoppingCartIcon className="iconCart" /> +
+            </button>
+          </div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
             <img className="img-articulo" src={Comida3} />
           </div>
-          <div className="title-section">precio</div>
-          <div className="description-section">descripcion</div>
+          <div className="title-section">
+            <span className="fontArticulos">Precio: 950 C$</span><br></br>
+            <span className="fontArticulos">Descripción: Pedigree Perros Adultos 55 lb</span>
+          </div>
+          <div className="description-section">
+            <button className="addCart"> 
+              <AddShoppingCartIcon className="iconCart" /> +
+            </button>
+          </div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
             <img className="img-articulo" src={Comida4} />
           </div>
-          <div className="title-section">precio</div>
-          <div className="description-section">descripcion</div>
+          <div className="title-section">
+            <span className="fontArticulos">Precio: 220 C$</span><br></br>
+            <span className="fontArticulos">Descripción: Members Selection Galletas para perro 10lb</span>
+          </div>
+          <div className="description-section">
+            <button className="addCart"> 
+              <AddShoppingCartIcon className="iconCart" /> +
+            </button>
+          </div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
             <img className="img-articulo" src={Comida5} />
           </div>
-          <div className="title-section">precio</div>
-          <div className="description-section">descripcion</div>
+          <div className="title-section">
+            <span className="fontArticulos">Precio: 80 C$</span><br></br>
+            <span className="fontArticulos">Descripción: Crupis bocadillos sabor bacon 1kg</span>
+          </div>
+          <div className="description-section">
+            <button className="addCart"> 
+              <AddShoppingCartIcon className="iconCart" /> +
+            </button>
+          </div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
             <img className="img-articulo" src={Comida6} />
           </div>
-          <div className="title-section">precio</div>
-          <div className="description-section">descripcion</div>
+          <div className="title-section">
+            <span className="fontArticulos">Precio: 450 C$</span><br></br>
+            <span className="fontArticulos">Descripción: Purina Beneful Original Cachorros 10Kg</span>
+          </div>
+          <div className="description-section">
+            <button className="addCart"> 
+              <AddShoppingCartIcon className="iconCart" /> +
+            </button>
+          </div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
             <img className="img-articulo" src={Comida7} />
           </div>
-          <div className="title-section">precio</div>
-          <div className="description-section">descripcion</div>
+          <div className="title-section">
+            <span className="fontArticulos">Precio: 320 C$</span><br></br>
+            <span className="fontArticulos">Descripción: Pedigree Comida humeda</span>
+          </div>
+          <div className="description-section">
+            <button className="addCart"> 
+              <AddShoppingCartIcon className="iconCart" /> +
+            </button>
+          </div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
             <img className="img-articulo" src={Comida8} />
           </div>
-          <div className="title-section">precio</div>
-          <div className="description-section">descripcion</div>
+          <div className="title-section">
+            <span className="fontArticulos">Precio: 420 C$</span><br></br>
+            <span className="fontArticulos">Descripción: Pet Master Cachorro 20lb</span>
+          </div>
+          <div className="description-section">
+            <button className="addCart"> 
+              <AddShoppingCartIcon className="iconCart" /> +
+            </button>
+          </div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
             <img className="img-articulo" src={Comida9} />
           </div>
-          <div className="title-section">precio</div>
-          <div className="description-section">descripcion</div>
+          <div className="title-section">
+            <span className="fontArticulos">Precio: 240 C$</span><br></br>
+            <span className="fontArticulos">Descripción: Don Gato Alimento 8kg</span>
+          </div>
+          <div className="description-section">
+            <button className="addCart"> 
+              <AddShoppingCartIcon className="iconCart" /> +
+            </button>
+          </div>
         </div>
         <div className="articulo-container">
           <div className="img-section">
             <img className="img-articulo" src={Comida10} />
           </div>
-          <div className="title-section">precio</div>
-          <div className="description-section">descripcion</div>
+          <div className="title-section">
+            <span className="fontArticulos">Precio: 45 C$</span><br></br>
+            <span className="fontArticulos">Descripción: Gati Mar y Tierra 1kg</span>
+          </div>
+          <div className="description-section">
+            <button className="addCart"> 
+              <AddShoppingCartIcon className="iconCart" /> +
+            </button>
+          </div>
         </div>
       </div>
     </>
