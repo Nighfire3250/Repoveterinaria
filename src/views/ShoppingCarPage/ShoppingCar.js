@@ -16,7 +16,7 @@ export default function ShoppingCar(props) {
              brand="Carrito"
              rightLinks={<HeaderLinks />}
             />
-            <div className="container">Carrito</div>
+            <div className="containerCar">Carrito</div>
         </div>
     );
 }

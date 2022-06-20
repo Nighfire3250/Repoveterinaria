@@ -85,7 +85,8 @@ const createEmployee = async (Employee) => {
        '${Employee.usuario}',
        'Emolina12@',
        '${Employee.rol}',
-       1)
+       1,
+       0)
       `
     );
     console.log(employees);
