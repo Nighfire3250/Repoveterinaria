@@ -46,7 +46,7 @@ export default function ShoppingCar(props) {
              brand="Carrito"
              rightLinks={<HeaderLinks />}
             />
-            <div className="container">Carrito</div>
+            <div className="containerCarrito">Carrito</div>
             <Headerr countCartItems={cartItems.length}></Headerr>
             <div className="row">
              <Main products={products} onAdd={onAdd}></Main>

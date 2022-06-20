@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import "./Sidebar.scss";
 import GroupIcon from "@mui/icons-material/Group";
@@ -59,7 +60,7 @@ export default function Sidebar() {
             </li>
           </ul>
         </div>
-        <div className="sidebarMenu">
+        {/*<div className="sidebarMenu">
           <h3 className="sidebarTitle">Archivo</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
@@ -67,7 +68,7 @@ export default function Sidebar() {
               Expedientes
             </li>
           </ul>
-        </div>
+        </div>*/}
       </div>
     </div>
   );

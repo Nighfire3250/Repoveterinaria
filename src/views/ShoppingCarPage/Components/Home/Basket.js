@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react";
 
 export default function Basket(props) {
@@ -8,17 +9,17 @@ export default function Basket(props) {
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
   return (
     <aside className="block col-1">
-      <h2>Articulos</h2>
+      <h2 className="h2Class">Articulos</h2>
       <div>
         {cartItems.length === 0 && <div>Vacío</div>}
         {cartItems.map((item) => (
           <div key={item.id} className="row">
             <div className="col-2">{item.name}</div>
             <div className="col-2">
-              <button onClick={() => onRemove(item)} className="remove">
+              <button onClick={() => onRemove(item)} className="buttonCarremove">
                 -
               </button>{" "}
-              <button onClick={() => onAdd(item)} className="add">
+              <button onClick={() => onAdd(item)} className="buttonCaradd">
                 +
               </button>
             </div>
@@ -57,7 +58,7 @@ export default function Basket(props) {
             </div>
             <hr />
             <div className="row">
-              <button onClick={() => alert("Por implementar!")}>
+              <button className="buttonCar" onClick={() => alert("Por implementar!")}>
                 Reservar
               </button>
             </div>

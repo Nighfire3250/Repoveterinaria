@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react";
 
 export default function Product(props) {
@@ -5,10 +6,10 @@ export default function Product(props) {
   return (
     <div>
       <img className="small" src={product.image} alt={product.name} />
-      <h3>{product.name}</h3>
+      <h3 className="h3class">{product.name}</h3>
       <div>${product.price}</div>
       <div>
-        <button onClick={() => onAdd(product)}>Añadir</button>
+        <button className="buttonCar" onClick={() => onAdd(product)}>Añadir</button>
       </div>
     </div>
   );
