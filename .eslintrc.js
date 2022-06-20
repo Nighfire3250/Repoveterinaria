@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 module.exports = {
   parser: "babel-eslint",
   env: {
@@ -19,6 +20,7 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   "rules": {
+    "react/prop-types": "off",
     "prettier/prettier": ["error",{
       "endOfLine": "auto"}
     ]
