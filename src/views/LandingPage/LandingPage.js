@@ -48,11 +48,11 @@ export default function LandingPage(props) {
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>
-                Busca de forma rapida los resultados de tu mascota.
+                Busca de forma rápida los resultados de tu mascota.
               </h1>
               <h4>
-                Nuestra intencion es aumentar tu satisfacion proporcionandote
-                una forma rapida al momento de buscar los resultados clinicos de
+                Nuestra intención es aumentar tu satisfacción proporcionandote
+                una forma rápida al momento de buscar los resultados clínicos de
                 tu mascota, por que sabemos lo importante que es para ti, por
                 eso damos lo mejor de nosotros VETERINARIA MUNDO MASCOTA.
               </h4>
@@ -65,7 +65,7 @@ export default function LandingPage(props) {
                 rel="noopener noreferrer"
               >
                 <i className="fas fa-play" />
-                Watch video
+                Mirar
               </Button>
             </GridItem>
           </GridContainer>

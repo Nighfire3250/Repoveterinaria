@@ -27,7 +27,7 @@ export default function createUser () {
     }));
   }
   const createData = async () => {
-    if (errorMessage === "Is Strong Password") {
+    if (errorMessage === "La contraseña es segura") {
       console.log(employee);
       const newData = await fetch("/hello", {
         method: "POST",
@@ -59,9 +59,9 @@ export default function createUser () {
       minLength: 8, minLowercase: 1,
       minUppercase: 1, minNumbers: 1, minSymbols: 1
     })) {
-      setErrorMessage('Is Strong Password')
+      setErrorMessage('La contraseña es segura')
     } else {
-      setErrorMessage('Is Not Strong Password')
+      setErrorMessage('La contraseña no es segura')
     }
     console.log(e);
   }

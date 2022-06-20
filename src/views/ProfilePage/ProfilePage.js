@@ -72,7 +72,7 @@ export default function ProfilePage(props) {
                     <img src={profile} alt="..." className={imageClasses} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Rolando Suazo</h3>
+                    <h3 className={classes.title}>Mauricio Delgado</h3>
                     <h6>Veterinario</h6>
                     <Button justIcon link className={classes.margin5}>
                       <i className={"fab fa-twitter"} />
@@ -104,7 +104,7 @@ export default function ProfilePage(props) {
                       tabIcon: AccountBox,
                       tabContent: (
                         <ul>
-                          <li>Nombre: Rolando Suazo</li>
+                          <li>Nombre: Mauricio Delgado</li>
                           <li>Edad: 28</li>
                           <li>Estudios: Universidad Central de Nicaragua</li>
                         </ul>

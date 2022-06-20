@@ -66,7 +66,7 @@ const Articulos = () => {
             <span className="fontArticulos">Descripción: Goldy Nutrición Óptima 4kg</span>
           </div>
           <div className="description-section">
-            <button className="addCart"> 
+            <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
           </div>
@@ -80,7 +80,7 @@ const Articulos = () => {
             <span className="fontArticulos">Descripción: Kirkland Signature Perro Adulto 18kg</span>
           </div>
           <div className="description-section">
-            <button className="addCart"> 
+            <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
           </div>
@@ -94,7 +94,7 @@ const Articulos = () => {
             <span className="fontArticulos">Descripción: Pedigree Perros Adultos 55 lb</span>
           </div>
           <div className="description-section">
-            <button className="addCart"> 
+            <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
           </div>
@@ -108,7 +108,7 @@ const Articulos = () => {
             <span className="fontArticulos">Descripción: Members Selection Galletas para perro 10lb</span>
           </div>
           <div className="description-section">
-            <button className="addCart"> 
+            <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
           </div>
@@ -122,7 +122,7 @@ const Articulos = () => {
             <span className="fontArticulos">Descripción: Crupis bocadillos sabor bacon 1kg</span>
           </div>
           <div className="description-section">
-            <button className="addCart"> 
+            <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
           </div>
@@ -136,7 +136,7 @@ const Articulos = () => {
             <span className="fontArticulos">Descripción: Purina Beneful Original Cachorros 10Kg</span>
           </div>
           <div className="description-section">
-            <button className="addCart"> 
+            <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
           </div>
@@ -150,7 +150,7 @@ const Articulos = () => {
             <span className="fontArticulos">Descripción: Pedigree Comida humeda</span>
           </div>
           <div className="description-section">
-            <button className="addCart"> 
+            <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
           </div>
@@ -164,7 +164,7 @@ const Articulos = () => {
             <span className="fontArticulos">Descripción: Pet Master Cachorro 20lb</span>
           </div>
           <div className="description-section">
-            <button className="addCart"> 
+            <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
           </div>
@@ -178,7 +178,7 @@ const Articulos = () => {
             <span className="fontArticulos">Descripción: Don Gato Alimento 8kg</span>
           </div>
           <div className="description-section">
-            <button className="addCart"> 
+            <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
           </div>
@@ -192,7 +192,7 @@ const Articulos = () => {
             <span className="fontArticulos">Descripción: Gati Mar y Tierra 1kg</span>
           </div>
           <div className="description-section">
-            <button className="addCart"> 
+            <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
           </div>
