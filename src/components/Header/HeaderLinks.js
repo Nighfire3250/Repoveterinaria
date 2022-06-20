@@ -509,7 +509,7 @@ export default function HeaderLinks() {
             href="http://localhost:3000"
             color="transparent"
             className={classes.navLink}
-          > <Home className={classes.icons} /> Inicio
+          > <Home className={classes.icons} /> Inici
           </Button>
         </ListItem>
         <ListItem className={classes.listItem}>
