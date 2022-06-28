@@ -15,8 +15,17 @@ import Comida8 from "assets/img/articulos/8-Pet master alimento para cahorro.jpg
 import Comida9 from "assets/img/articulos/9-Don gato alimento.jpg";
 import Comida10 from "assets/img/articulos/10-gati alimento.jpg";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import Select from "react-select"
 import "./Articulos.scss";
 const Articulos = () => {
+  const optionsProductos = [
+    { value: 'cachorro', label: 'Cachorro' },
+    { value: 'adulto', label: 'Adulto' },
+  ]
+  const optionsEspecie = [
+    { value: 'perro', label: 'Perro' },
+    { value: 'gato', label: 'Gato' },
+  ]
   return (
     <>
       <div className="categorias-container">
@@ -55,6 +64,15 @@ const Articulos = () => {
             <p>Medicamentos</p>
           </div>
         </div>
+      </div>
+      <div className="divspanSelect">
+        <span className="spanSelect">Seleccione...</span>
+      </div>
+      <div className="divSelectProductos">
+        <span className="spanSelect">Especie</span>
+        <Select className="selectProductos" options={optionsEspecie} />
+        <span className="spanSelect">Tamaño</span>
+        <Select className="selectRaza" options={optionsProductos} />
       </div>
       <div className="articulos-container">
         <div className="articulo-container">
