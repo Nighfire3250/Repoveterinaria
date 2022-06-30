@@ -1,4 +1,5 @@
 import React from "react";
+import carico from "assets/img/articulos/cartticon.ico";
 
 export default function Headerr(props) {
   return (
@@ -10,7 +11,7 @@ export default function Headerr(props) {
       </div>
       <div>
         <a className="aClass" href="#/cart">
-          Carrito{" "}
+          <img className="badge" src={carico} />{" "}
           {props.countCartItems ? (
             <button className="badge">{props.countCartItems}</button>
           ) : (
