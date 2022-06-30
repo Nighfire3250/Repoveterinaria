@@ -26,6 +26,28 @@ export default function Sidebar() {
           </ul>
         </div>
         <div className="sidebarMenu">
+          <h3 className="sidebarTitle">Citas</h3>
+          <ul className="sidebarList">
+            <li className="sidebarListItem">
+              <a href="http://localhost:3000/admin-page/listCitas">
+                <GroupIcon className="sidebarIcons" />
+                Lista de Citas
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitle">Facturas</h3>
+          <ul className="sidebarList">
+            <li className="sidebarListItem">
+              <a href="http://localhost:3000/admin-page/listFacturas">
+                <GroupIcon className="sidebarIcons" />
+                Lista de Facturas
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="sidebarMenu">
           <h3 className="sidebarTitle">Catálogos</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">

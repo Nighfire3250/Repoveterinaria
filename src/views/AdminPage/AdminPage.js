@@ -15,6 +15,8 @@ import Proveedores from "./Sections/Catalogos/CatProveedores.jsx";
 import Roles from "./Sections/Catalogos/CatRoles.jsx";
 import User from "./Sections/editPages/SectionEdit.jsx";
 import CreateUser from "./Sections/createUser/createUser.jsx";
+import ListCitas from "./Sections/Citas/listCitas.jsx";
+import ListFacturas from "./Sections/Facturas/listFacturas.jsx";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export default function AdminPage(props) {
@@ -51,6 +53,12 @@ export default function AdminPage(props) {
           </Route>
           <Route exact path="/admin-page/crearUsuario">
             <CreateUser />
+          </Route>
+          <Route exact path="/admin-page/listCitas">
+            <ListCitas />
+          </Route>
+          <Route exact path="/admin-page/listFacturas">
+            <ListFacturas />
           </Route>
           <Route exact path="/admin-page/:userId">
             <User />
