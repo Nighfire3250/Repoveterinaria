@@ -28,6 +28,13 @@ const data = {
       image:
         "https://lionbrand.com.ni/wp-content/uploads/2019/02/goldy_cachorro_alimento_canino.jpg",
     },
+    {
+      id: "5",
+      name: "Don Gato",
+      price: 100,
+      image:
+        "https://walmartni.vtexassets.com/arquivos/ids/202699/Alimento-Para-Gato-Don-Gato-Adulto-8Kg-2-2999.jpg?v=637824484207170000",
+    },
   ],
 };
 export default data;
