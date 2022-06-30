@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
+import swal from "sweetalert";
 
 export default function Basket(props) {
   const { cartItems, onAdd, onRemove } = props;
@@ -58,7 +59,7 @@ export default function Basket(props) {
             </div>
             <hr />
             <div className="row">
-              <button className="buttonCar" onClick={() => alert("Por implementar!")}>
+              <button className="buttonCar" onClick={() => swal("Éxito", "Su pedido fue realizado")}>
                 Reservar
               </button>
             </div>
