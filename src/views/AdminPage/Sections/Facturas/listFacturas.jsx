@@ -4,6 +4,7 @@
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import FileOpenIcon from "@mui/icons-material/FileOpen";
+import Pdf from "assets/img/articulos/Factura.pdf";
 import "./listFacturas.scss";
 
 const columns = [
@@ -16,14 +17,18 @@ const columns = [
       width: 160,
       renderCell: (params) => {
         return(
-            <button className="facturaButton"><FileOpenIcon /></button>
+            <a className="facturaButton" href={Pdf} target="_blank" rel="noreferrer"><FileOpenIcon /></a>
         );
       },
     },
 ];
 
 const rows = [
+<<<<<<< HEAD
     { id: 1, cliente: "Jairo", fecha: "1/7/2022", total: 45 },
+=======
+    { id: 1, cliente: "Ernesto", fecha: "1/7/2022", total: 852 },
+>>>>>>> 1af7973c972d7af6a4ce5e04b1af3615f86d30dd
 ];
 
 
