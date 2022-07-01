@@ -1,6 +1,9 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
-import swal from "sweetalert";
+/* import swal from "sweetalert"; */
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import Pdf from "assets/img/articulos/Factura.pdf";
 
 export default function Basket(props) {
   const { cartItems, onAdd, onRemove } = props;
@@ -59,9 +62,7 @@ export default function Basket(props) {
             </div>
             <hr />
             <div className="row">
-              <button className="buttonCar" onClick={() => swal("Éxito", "Su pedido fue realizado")}>
-                Reservar
-              </button>
+            <a className="buttonCar" href={Pdf} target="_blank" rel="noreferrer">Reservar</a>
             </div>
           </>
         )}
