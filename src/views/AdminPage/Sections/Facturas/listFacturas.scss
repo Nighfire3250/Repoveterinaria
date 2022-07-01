@@ -1,3 +1,15 @@
 .listFactura {
     flex: 4;
 }
+
+.facturaButton {
+    display: flex;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #3bb077;
+    color: white;
+    cursor: pointer;
+    vertical-align: middle;
+    align-items: center;
+}

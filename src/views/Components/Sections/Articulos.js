@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 import React from "react";
 import "assets/myComponents/Articulos.scss";
@@ -16,6 +17,7 @@ import Comida9 from "assets/img/articulos/9-Don gato alimento.jpg";
 import Comida10 from "assets/img/articulos/10-gati alimento.jpg";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Select from "react-select"
+import InputNumber from "rc-input-number";
 import "./Articulos.scss";
 const Articulos = () => {
   const optionsProductos = [
@@ -87,6 +89,7 @@ const Articulos = () => {
             <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
+            <input className="inNumber" type="number" defaultValue={0} max={5} min={0}></input>
           </div>
         </div>
         <div className="articulo-container">

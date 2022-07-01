@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./Sidebar.scss";
@@ -8,6 +9,8 @@ import InventoryIcon from "@mui/icons-material/Inventory";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import ManIcon from "@mui/icons-material/Man";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
+import DateRangeIcon from "@mui/icons-material/DateRange";
+import ReceiptIcon from "@mui/icons-material/Receipt";
 
 export default function Sidebar() {
   return (
@@ -30,7 +33,7 @@ export default function Sidebar() {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <a href="http://localhost:3000/admin-page/listCitas">
-                <GroupIcon className="sidebarIcons" />
+                <DateRangeIcon className="sidebarIcons" />
                 Lista de Citas
               </a>
             </li>
@@ -41,7 +44,7 @@ export default function Sidebar() {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <a href="http://localhost:3000/admin-page/listFacturas">
-                <GroupIcon className="sidebarIcons" />
+                <ReceiptIcon className="sidebarIcons" />
                 Lista de Facturas
               </a>
             </li>
