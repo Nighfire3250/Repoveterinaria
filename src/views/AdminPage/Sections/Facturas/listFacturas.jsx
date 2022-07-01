@@ -23,7 +23,7 @@ const columns = [
 ];
 
 const rows = [
-    { id: 1, cliente: "Ernesto", fecha: "1/7/2022", total: 45 },
+    { id: 1, cliente: "Jairo", fecha: "1/7/2022", total: 45 },
 ];
 
 

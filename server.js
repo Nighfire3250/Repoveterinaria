@@ -22,6 +22,13 @@ app.post("/api", async (req, res) => {
   res.send(result.recordset);
 });
 
+app.post("/pacientes", async (req, res) => {
+  console.log("called");
+  const result = await dbOperation.getPacienteDatos(req.body.name);
+  console.log(result.recordset);
+  res.send(result.recordset);
+});
+
 app.post("/apiEmployeeLogin", async (req, res) => {
   console.log("called buscar");
   const result = await dbOperation.getEmployeesLogin(req.body.nombre);

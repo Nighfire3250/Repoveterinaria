@@ -14,7 +14,7 @@ const columns = [
 ];
 
 const rows = [
-    { id: 1, dueno: "Ernesto", mascota: "Chele", veterinario: "Claudia", fecha: "3/7/2022", estado: "Pendiente" },
+    { id: 1, dueno: "Jairo", mascota: "Chele", veterinario: "Claudia", fecha: "3/7/2022", estado: "Pendiente" },
 ];
 
 export default function ListCitas() {

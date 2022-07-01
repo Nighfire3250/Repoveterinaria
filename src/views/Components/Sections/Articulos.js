@@ -104,6 +104,7 @@ const Articulos = () => {
             <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
+            <input className="inNumber" type="number" defaultValue={0} max={3} min={0}></input>
           </div>
         </div>
         <div className="articulo-container">
@@ -118,6 +119,7 @@ const Articulos = () => {
             <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
+            <input className="inNumber" type="number" defaultValue={0} max={3} min={0}></input>
           </div>
         </div>
         <div className="articulo-container">
@@ -132,6 +134,7 @@ const Articulos = () => {
             <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
+            <input className="inNumber" type="number" defaultValue={0} max={5} min={0}></input>
           </div>
         </div>
         <div className="articulo-container">
@@ -146,6 +149,7 @@ const Articulos = () => {
             <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
+            <input className="inNumber" type="number" defaultValue={0} max={10} min={0}></input>
           </div>
         </div>
         <div className="articulo-container">
@@ -160,6 +164,7 @@ const Articulos = () => {
             <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
+            <input className="inNumber" type="number" defaultValue={0} max={7} min={0}></input>
           </div>
         </div>
         <div className="articulo-container">
@@ -174,6 +179,7 @@ const Articulos = () => {
             <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
+            <input className="inNumber" type="number" defaultValue={0} max={5} min={0}></input>
           </div>
         </div>
         <div className="articulo-container">
@@ -188,6 +194,7 @@ const Articulos = () => {
             <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
+            <input className="inNumber" type="number" defaultValue={0} max={6} min={0}></input>
           </div>
         </div>
         <div className="articulo-container">
@@ -202,6 +209,7 @@ const Articulos = () => {
             <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
+            <input className="inNumber" type="number" defaultValue={0} max={15} min={0}></input>
           </div>
         </div>
         <div className="articulo-container">
@@ -216,6 +224,7 @@ const Articulos = () => {
             <button className="addCart" href="http://localhost:3000/shoppingCar" > 
               <AddShoppingCartIcon className="iconCart" /> +
             </button>
+            <input className="inNumber" type="number" defaultValue={0} max={15} min={0}></input>
           </div>
         </div>
       </div>
