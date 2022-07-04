@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
-import React from "react";
+import React, { useState } from "react";
 import "assets/myComponents/Articulos.scss";
 import fondoComida from "assets/img/fondo_comida.png";
 import fondoJuguete from "assets/img/fondo_juguete.jpg";
@@ -20,6 +20,8 @@ import Select from "react-select"
 import InputNumber from "rc-input-number";
 import "./Articulos.scss";
 const Articulos = () => {
+  const [userChoice, setUserChoice] = useState("")
+
   const optionsProductos = [
     { value: 'cachorro', label: 'Cachorro' },
     { value: 'adulto', label: 'Adulto' },
@@ -28,6 +30,7 @@ const Articulos = () => {
     { value: 'perro', label: 'Perro' },
     { value: 'gato', label: 'Gato' },
   ]
+
   return (
     <>
       <div className="categorias-container">
@@ -72,9 +75,10 @@ const Articulos = () => {
       </div>
       <div className="divSelectProductos">
         <span className="spanSelect">Especie</span>
-        <Select className="selectProductos" options={optionsEspecie} />
+        <Select className="selectProductos" onChange={(choice) => setUserChoice(choice.value)} options={optionsEspecie} />
         <span className="spanSelect">Tamaño</span>
         <Select className="selectRaza" options={optionsProductos} />
+        <button onClick={alert(userChoice)}>Click</button>
       </div>
       <div className="articulos-container">
         <div className="articulo-container">

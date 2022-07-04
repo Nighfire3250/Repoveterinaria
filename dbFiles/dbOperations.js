@@ -89,6 +89,20 @@ const logout = async (Employee) => {
   }
 };
 
+const citaUpdate = async (Employee) => {
+  try {
+    let pool = await sql.connect(config);
+    let employees = await pool
+      .request()
+      .query(
+        `UPDATE CITA SET observaciones = '${Employee.observaciones}', estado = 1 WHERE idCita = 1`
+      );
+    return employees;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const createEmployee = async (Employee) => {
   try {
     let pool = await sql.connect(config);
@@ -118,4 +132,5 @@ module.exports = {
   logout,
   getEmployeesLogin,
   getPacienteDatos,
+  citaUpdate,
 };

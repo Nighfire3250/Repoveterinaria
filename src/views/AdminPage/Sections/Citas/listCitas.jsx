@@ -1,7 +1,13 @@
+/* eslint-disable no-undef */
+/* eslint-disable react/display-name */
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
+import ReplayIcon from "@mui/icons-material/Replay";
+import EditIcon from "@mui/icons-material/Edit";
+import { Link } from "react-router-dom";
 import "./listCitas.scss";
 
 const columns = [
@@ -11,6 +17,20 @@ const columns = [
     { field: "veterinario", headerName: "Veterinario", width: 160 },
     { field: "fecha", headerName: "Fecha", width: 160 },
     { field: "estado", headerName: "Estado", width: 160 },
+    {
+        field: "action",
+        headerName: "Acción",
+        width: 160,
+        renderCell: (params) => {
+          return (
+            <Link to={"/admin-page/listCitas/" + params.row.id}>
+              <button className="usersListEdit">
+                <EditIcon />
+              </button>
+            </Link>
+          );
+        },
+      },
 ];
 
 const rows = [
@@ -20,6 +40,9 @@ const rows = [
 export default function ListCitas() {
     return(
         <div className="listCita">
+            <button className="createUserButton" onClick={() => fetchData()}>
+                <ReplayIcon className="addIcon" />
+            </button>
             <DataGrid
                 rows={rows}
                 columns={columns}

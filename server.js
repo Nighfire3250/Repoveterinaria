@@ -56,6 +56,11 @@ app.post("/logOut", async (req, res) => {
   res.send(result.recordset);
 });
 
+app.post("/citaUpdate", async (req, res) => {
+  console.log("called citaUpdate");
+  const result = await dbOperation.citaUpdate(req.body.nombre);
+});
+
 app.post("/hello", async (req, res) => {
   console.log("called create");
   await dbOperation.createEmployee(req.body);
