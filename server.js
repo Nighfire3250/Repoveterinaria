@@ -22,6 +22,13 @@ app.post("/api", async (req, res) => {
   res.send(result.recordset);
 });
 
+app.post("/apiCitas", async (req, res) => {
+  console.log("called apiCitas");
+  const result = await dbOperation.getCitas(req.body.name);
+  console.log(result.recordset);
+  res.send(result.recordset);
+});
+
 app.post("/pacientes", async (req, res) => {
   console.log("called");
   const result = await dbOperation.getPacienteDatos(req.body.name);

@@ -18,6 +18,20 @@ const getEmployees = async () => {
   }
 };
 
+const getCitas = async () => {
+  try {
+    let pool = await sql.connect(config);
+    let employees = await pool
+      .request()
+      .query(
+        "SELECT estado FROM CITA WHERE idUsuario = 1"
+      );
+    return employees;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const getPacienteDatos = async () => {
   try {
     let pool = await sql.connect(config);
@@ -133,4 +147,5 @@ module.exports = {
   getEmployeesLogin,
   getPacienteDatos,
   citaUpdate,
+  getCitas,
 };

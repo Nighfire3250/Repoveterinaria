@@ -3,7 +3,7 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
-import React from "react";
+import React, { useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import ReplayIcon from "@mui/icons-material/Replay";
 import EditIcon from "@mui/icons-material/Edit";
@@ -33,11 +33,34 @@ const columns = [
       },
 ];
 
-const rows = [
-    { id: 1, dueno: "Jairo", mascota: "Chele", veterinario: "Claudia", fecha: "3/7/2022", estado: "Pendiente" },
-];
 
 export default function ListCitas() {
+    const [returnedData, setReturnedData] = useState(["hello"]);
+    const [employee, setEmployee] = useState({
+        estado: "false",
+    });
+    const fetchData = async () => {
+      console.log(employee);
+      const newData = await fetch("/apiCitas", {
+        method: "POST",
+        headers: {
+        "content-type": "application/json",
+        Accept: "application/json",
+        },
+        body: JSON.stringify({
+         estado: employee.estado,
+        }),
+      }).then((res) => res.json());
+      console.log(newData);
+        // eslint-disable-next-line no-undef
+      console.log(newData[0]);
+      setReturnedData(newData[0]);
+    };
+
+    const rows = [
+        { id: 1, dueno: "Jairo", mascota: "Chele", veterinario: "Claudia", fecha: "4/7/2022", estado: returnedData.estado },
+    ];
+
     return(
         <div className="listCita">
             <button className="createUserButton" onClick={() => fetchData()}>
